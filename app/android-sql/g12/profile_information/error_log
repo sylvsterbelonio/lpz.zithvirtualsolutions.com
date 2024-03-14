@@ -1,0 +1,121 @@
+[19-Dec-2022 00:20:34 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 24
+[19-Dec-2022 00:20:36 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 24
+[19-Dec-2022 00:20:38 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 24
+[19-Dec-2022 00:21:19 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 24
+[19-Dec-2022 00:21:52 UTC] PHP Parse error:  syntax error, unexpected token "{" in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 24
+[19-Dec-2022 00:28:22 UTC] PHP Fatal error:  Cannot use [] for reading in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 36
+[19-Dec-2022 01:16:39 UTC] PHP Warning:  Attempt to read property "num_rows" on bool in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 62
+[19-Dec-2022 01:17:05 UTC] PHP Warning:  Attempt to read property "num_rows" on bool in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 62
+[19-Dec-2022 01:24:41 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+                          height_metric = '',
+                          weight' at line 11 in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php:73
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php(73): mysqli->query()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 73
+[19-Dec-2022 01:25:15 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+                          height_metric = '',
+                          weight' at line 11 in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php:73
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php(73): mysqli->query()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 73
+[19-Dec-2022 01:25:26 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+                          height_metric = '',
+                          weight' at line 11 in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php:73
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php(73): mysqli->query()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 73
+[19-Dec-2022 01:25:37 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+                          height_metric = '',
+                          weight' at line 11 in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php:73
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php(73): mysqli->query()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 73
+[19-Dec-2022 01:25:50 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+                          height_metric = '',
+                          weight' at line 11 in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php:73
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php(73): mysqli->query()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 73
+[19-Dec-2022 01:27:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+                          height_metric = '',
+                          weight' at line 11 in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php:73
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php(73): mysqli->query()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 73
+[19-Dec-2022 01:27:57 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+                          height_metric = '',
+                          weight' at line 11 in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php:73
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php(73): mysqli->query()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 73
+[24-Dec-2022 01:31:27 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Data too long for column 'name_ext' at row 3 in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php:71
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php(71): mysqli->query()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 71
+[24-Dec-2022 01:34:32 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+                          height_metric = '-',
+                          weigh' at line 11 in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php:71
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php(71): mysqli->query()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 71
+[24-Dec-2022 01:35:14 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+                          height_metric = 'CM',
+                          weig' at line 11 in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php:71
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php(71): mysqli->query()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 71
+[24-Dec-2022 01:36:20 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',
+                          height_metric = 'CM',
+                          weig' at line 11 in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php:71
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php(71): mysqli->query()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 71
+[26-Dec-2022 13:57:52 UTC] PHP Warning:  Undefined variable $response in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 115
+[26-Dec-2022 13:57:52 UTC] PHP Warning:  Undefined variable $action in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 130
+[26-Dec-2022 13:57:52 UTC] PHP Warning:  Undefined variable $data in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 130
+[26-Dec-2022 14:01:18 UTC] PHP Warning:  Undefined variable $response in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 115
+[26-Dec-2022 14:01:18 UTC] PHP Warning:  Undefined variable $action in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 130
+[26-Dec-2022 14:01:18 UTC] PHP Warning:  Undefined variable $data in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 130
+[26-Dec-2022 14:03:45 UTC] PHP Warning:  Undefined variable $response in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 115
+[26-Dec-2022 14:03:45 UTC] PHP Warning:  Undefined variable $action in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 130
+[26-Dec-2022 14:03:45 UTC] PHP Warning:  Undefined variable $data in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 130
+[26-Dec-2022 14:04:55 UTC] PHP Warning:  Undefined variable $response in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 115
+[26-Dec-2022 14:04:55 UTC] PHP Warning:  Undefined variable $action in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 130
+[26-Dec-2022 14:04:55 UTC] PHP Warning:  Undefined variable $data in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 130
+[26-Dec-2022 14:05:47 UTC] PHP Warning:  Undefined variable $response in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 73
+[26-Dec-2022 14:05:47 UTC] PHP Warning:  Undefined variable $action in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 73
+[26-Dec-2022 14:05:47 UTC] PHP Warning:  Undefined variable $data in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 73
+[26-Dec-2022 14:19:28 UTC] PHP Warning:  Undefined variable $response in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 115
+[26-Dec-2022 14:19:28 UTC] PHP Warning:  Undefined variable $action in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 130
+[26-Dec-2022 14:19:28 UTC] PHP Warning:  Undefined variable $data in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 130
+[26-Dec-2022 14:20:03 UTC] PHP Warning:  Undefined variable $response in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 115
+[26-Dec-2022 14:20:03 UTC] PHP Warning:  Undefined variable $action in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 130
+[26-Dec-2022 14:20:03 UTC] PHP Warning:  Undefined variable $data in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 130
+[26-Dec-2022 14:22:55 UTC] PHP Warning:  Undefined variable $response in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 115
+[26-Dec-2022 14:22:55 UTC] PHP Warning:  Undefined variable $action in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 130
+[26-Dec-2022 14:22:55 UTC] PHP Warning:  Undefined variable $data in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 130
+[26-Dec-2022 14:26:08 UTC] PHP Warning:  Undefined variable $response in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 115
+[26-Dec-2022 14:26:08 UTC] PHP Warning:  Undefined variable $action in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 130
+[26-Dec-2022 14:26:08 UTC] PHP Warning:  Undefined variable $data in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 130
+[26-Dec-2022 14:32:57 UTC] PHP Warning:  Undefined variable $response in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 115
+[26-Dec-2022 14:32:57 UTC] PHP Warning:  Undefined variable $action in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 130
+[26-Dec-2022 14:32:57 UTC] PHP Warning:  Undefined variable $data in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 130
+[29-Dec-2022 09:37:04 UTC] PHP Warning:  Undefined variable $response in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 115
+[29-Dec-2022 09:37:04 UTC] PHP Warning:  Undefined variable $action in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 130
+[29-Dec-2022 09:37:04 UTC] PHP Warning:  Undefined variable $data in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 130
+[29-Dec-2022 11:54:50 UTC] PHP Warning:  Undefined variable $response in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 157
+[29-Dec-2022 11:54:50 UTC] PHP Warning:  Undefined variable $action in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 157
+[29-Dec-2022 11:54:50 UTC] PHP Warning:  Undefined variable $data in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 157
+[29-Dec-2022 12:14:05 UTC] PHP Warning:  Undefined variable $response in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 116
+[29-Dec-2022 12:14:58 UTC] PHP Warning:  Undefined variable $response in /home/tgscwozb/public_html/app/android-sql/g12/profile_information/personal_information.php on line 116

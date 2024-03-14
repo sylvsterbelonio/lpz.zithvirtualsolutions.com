@@ -1,0 +1,315 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title></title>
+  <style>
+                        :root { --_border: #5f5f5f;  --_dark_first: #3a0000; --separator_light: #ececec; --_light_first: #8b0000; --_first: #660000; --_light_second:#fff7f7; --_second:#FFF3F0; --_third:#868784; --_fourth:#F9DD4D; --_super_dark_fifth:#0a1a29; --_dark_fifth:#0a1a29; --_fifth:#102E4A; --_six:#313628; --_light_seven:#1ebabd; --_seven:#168B8D; }
+                        *{font-family: Arial, Geneva, Helvetica, sans-serif;-webkit-user-select: none;}
+                        .text-default {color :#757575} .text-primary { color: #4fad8a;}.text-error { color: #dc3545;}.text-success {color: #198754}
+                        .text-secondary {color: #757575;}
+                        .text-super-light-primary { color: #e11919 }
+                        .text-light-primary { color: #66e2b2 }
+                        .font-italic { font-style: italic; } 
+                        .font-bold { font-weight: bold; } 
+                         body { width:100%; background-color: #FFF;margin: 0px; padding: 0px; height: 100%;} 
+                        .content{  padding: 1px 20px 20px 15px; } 
+                        .indent{margin-left:40px} 
+                        .j{text-align:justify;} 
+                        .i{font-style: italic;}
+                        .c {text-align:center}
+                        .p{text-align: justify;} 
+                        .headings{background-color: #4eab87;padding:8px} 
+                        .column { float: left; width: 50%; padding: 0px; }
+                        .row:after { content: ""; display: table; clear: both; }
+                        .mb-0{ margin-bottom:0dp; }
+                        .row{ padding-top:20px;margin-bottom:20px; }  
+                        .mt-1 {margin-top:10dp;}
+                        .verses{ display:none}
+                        .button-verse{width:30px;height:30px;background-color:#f9cece;border-color: #00000;display:inline;padding:3px;color:black}
+                        .button-verse-ext{display:inline;}
+                        .text-sm {font-size:10px;}
+                        .highlight-verse{background-color:#fff7bf;color:black}
+                        .bullet-none{list-style:none}
+                        span{text-align:justify}
+                        .sj{text-align: justify; display:block;}
+                        .responsive { width: 100%; height: auto;}                       
+                        hide {     transition: 1s ease height;   }                        
+                        show {    transition: 1s ease height;  }                       
+                        .tab {  border-radius: 20px 20px 0px 0px;  overflow: hidden;  border: 1px solid #4fad8a;  background-color: #4fad8a;  color:"#ffffff";   }
+                        .tab button {  background-color: inherit; color:#fff; float: left;  border: none;  outline: none;  cursor: pointer;  padding: 14px 16px;  transition: 0.3s;  font-size: 12px;    color:"#ffffff";     }
+                        .tab button:hover {   background-color: #68e1b4;    }
+                        .tab button.active-2 {   background-color: #3b8166; color:#fff  }  
+                        .tabcontent {  display: none;  background-color: #fff;  padding: 6px 12px;  border: 1px solid #ccc;  border-top: none; border-radius: 0px 0px 20px 20px; -webkit-animation: fadeEffect 1s; animation: fadeEffect 1s;   }
+                        .tabcontent-2 {   display: none;  background-color: #fff7bf;  padding: 6px 12px;  border: 1px solid #ccc;  border-top: none;  border-radius: 0px 0px 20px 20px;  -webkit-animation: fadeEffect 1s;  animation: fadeEffect 1s;  }                                        
+                        @-webkit-keyframes fadeEffect {  from {opacity: 0;}   to {opacity: 1;}   }
+                        @keyframes fadeEffect {  from {opacity: 0;}  to {opacity: 1;}  }                                                 
+                        .accordion {  background-color: #4eab87;  color: #fff;  cursor: pointer;  padding: 18px;  width: 100%;  border-top: none;border-right:none;border-left:none; border-bottom: 1px solid #2c937a;  text-align: left;  outline: none;  font-size: 15px;  transition: 0.4s;}
+                        .active, .accordion:hover {  background-color: #3b8166;border-top: none;border-right:none;border-left:none; border-bottom: 1px solid #306953;}
+                        .accordion:after {  content: '\002B';  color: #fff;  font-weight: bold;  float: right;  margin-left: 5px;}
+                        .active:after {  content: "\2212";}
+                        .panel {  padding: 0 18px;  background-color: white;  max-height: 0;  overflow: hidden;  transition: max-height 0.2s ease-out;  border-left: 1px solid #ccc;   border-right: 1px solid #ccc;  overflow-y: auto;  overflow-x:hidden;}                            
+                        #study-word {border-bottom: 1px solid var(--_border);}
+                        textarea {    width:100%;height:300px;    -webkit-border-radius: 10px;    -moz-border-radius: 10px;    border-radius: 10px;    border:solid 1px #ccc;     padding:10px;}   
+                        textarea:focus {     outline: none !important;    border-color: #4eab87;    box-shadow: 0 0 10px #4eab87; }                                                                      
+                        input{width:100%;    -webkit-border-radius: 10px;    -moz-border-radius: 10px;    border-radius: 10px;    border:solid 1px #ccc;     padding:10px;} 
+                        input:focus {     outline: none !important;    border-color: #4eab87;    box-shadow: 0 0 10px #4eab87; }       
+                        .btn {  background-color: #4eab87; /* Green */  border: none;  color: white;  padding: 8px 16px;  text-align: center;  text-decoration: none;  display: inline-block;  cursor: pointer;    -webkit-border-radius: 10px;    -moz-border-radius: 10px;  border-radius: 10px;}
+                        .btn:hover {  background-color: #3b8166;}      
+                        .container {  display: block;  position: relative;  padding-left: 35px;  margin-bottom: 12px;  cursor: pointer;  -webkit-user-select: none;  -moz-user-select: none;  -ms-user-select: none;  user-select: none;  }
+                        .container input {  position: absolute;  opacity: 0;  cursor: pointer;  height: 0;  width: 0;}
+                        .checkmark {  position: absolute;  top: 0;  left: 0;  height: 20px;  width: 20px;  background-color: #eee;}
+                        .container:hover input ~ .checkmark {  background-color: #ccc;}
+                        .container input:checked ~ .checkmark {  background-color: #4eab87;}
+                        .checkmark:after {  content: "";  position: absolute;  display: none;}
+                        .container input:checked ~ .checkmark:after {  display: block;}
+                        .container .checkmark:after {  left: 6px;  top: 2px;  width: 5px;  height: 10px;  border: solid white;  border-width: 0 3px 3px 0;  -webkit-transform: rotate(45deg);  -ms-transform: rotate(45deg);  transform: rotate(45deg);}
+                        .navbar {  overflow: hidden;  background-color: #4eab87;  position: fixed;  top: 0;  width: 100%;box-shadow: 0 4px 6px 0 rgba(0,0,0,.3);}
+                        .navbar a {  float: left;  display: block;  color: #f2f2f2;  text-align: center;  padding: 14px 16px;  text-decoration: none;  font-size: 17px;}
+                        .navbar #btnUpdate:hover {  background: #3b8166;  color: white;}
+                        .content-top{margin-top:45px}
+  </style>
+  <script> var normal_color = "#000000"; var normal_color_background = "#f9cece";  var active_color = "#ffffff";  var active_color_background = "#8b0000";</script>
+  </head>
+  <body>
+       
+   <div class="navbar">
+        <a><span class="" style="color:white">WEEK 1 | DAY 3</span></a>
+        <a href="javascript:void(0)" onclick="saveRecord()" id="btnUpdate"  style="float:right">Save Answers</a>
+    </div>
+   
+   <div class="content-top">
+   
+    <img class="responsive" src="images/week-1-learning-from-our-mistakes.jpg">
+   
+   <button class="accordion active">Topic</button>
+    <div class="panel" style="max-height:5000;height:auto">
+   
+    <h1 align=center>D  A  Y   3</h1>
+    <h2 align=center><b>HULI NA BA ANG LAHAT PARA SA <span class="text-primary">PAKIKIPAG-AYOS?</span></b></h2>
+    
+    <p class="j">
+          Ayon sa Oxford English Dictionary, and salitang <i class="text-primary">pakikipag-ayos o reconciliation</i> ay nangangahulugang <i class="text-primary">
+          "ang aksyon ng pagpapanumbalik sa mga tao o grupong pinag-iba o pinagbuklod tungo sa pagkakaibigan."
+          </i> Ang pakikipag-ayos ay tumutukoy sa pagpapanumbalik ng relasyon. Noong tayo'y nilalang ng Diyos, 
+          nilikha Niya tayo nang may pangangailangang magmahal at mahalin. Ang ninanais Niya sa sangkatauhan ay 
+          dalisay na pakikipagkaibigan - sa Kaniya at sa bawat tao at kanilang kapwa. Dahil doo'y nagkaroon ng 
+          layunin ang Diyos: nilikha niya ang ideya ng pagpapakasal at pamilya. Subalit dahil sa pagsuway ni Adan, ang layuni'y 
+          napigilan at ang rebelyon at pagkamakasarili ang nanaig. 
+    </p>
+    <p class="j">
+            Maging sa ngayo'y naghihintay parin ang Diyos na magkaroon ng pangkalahatang pagkakaisa o harmony; nais Niyang magbalik loob tayo sa Kaniya at makipagkasundo sa mga tao sa ating kapaligiran.   
+    </p>
+    <p class="c">
+     <i class="highlight-verse">  Babalik ako sa aking ama at sasabihin ko sa kanya, "Ama, nagkasala po ako sa Diyos at sa inyo."</i> - <b> (Lucas 15:18) </b>
+    </p>
+    <p class="j">
+        Ang alibughang anak ay buo ang loob sa pag-amin ng pagkakamali at pagkakasala, pag-ako nito at paghingi ng tawad. Ang manunulat sa Kawikaa'y nagsabi,
+         <i class="highlight-verse">"Ang nagkukubli ng kanyang sala ay hindi mapapabuti, ngunit kahahabagan ng Diyos ang nagbabalik-loob 
+         at nagsisisi"</i> - <b> (Kawikaan 28:13).</b> Ani Juan, <i class="highlight-verse">"Subalit kung ipinapahayag natin sa Diyos ang ating mga kasalanan, 
+         maaasahan nating patatawarin tayo ng Diyos sa mga ito, at lilinisin tayo sa 
+         lahat ng ating kasalanan, sapagkat siya'y tapat at matuwid" </i> - <b>(Juan 1:9).</b> Ang alibughang anak ay nagdesisyong sabihin sa kaniyang ama ang mga katagang
+        <i class="text-primary">"Ama, nagkasala po ako sa Diyos at sa inyo."</i> (Lucas 15:18).   
+    </p>
+
+    <p class="j">
+        Kapag ang tao'y nagkasala at nakasakit sa Diyos, nasasaktan din nila ang mga taong nakapaligid sa kanila. 
+        Ang pag-amin o confession ay resulta ng nagsisising puso na kung saa'y alam niyang siya'y lumihis ng landas at ngayo'y 
+        pinipiling bumalik sa tamang landas. Ang ating kinabukasan ay nakasalalay sa pinakamahahalaga o crucial na mga panahong tulad nito. 
+    </p>
+    <p class="j">
+    Ang salitang <i class="text-primary">crucial</i> ay nagsimula sa salitang Latin na ang ibig sabihi'y cross [4]. 
+    Hindi nagkataon lamang na ang krus ay gawa sa dalawang piraso ng kahoy: ang isa'y pahalang at ang isa'y 
+    pababa. Ang pababang kahoy ay nagpapahiwatig ng pagtaas natin ng ating mga paningin sa Diyos, samantalang ang pahalang nama'y 
+    nagpapahiwatig ngating kamalayan sa mga pangangailangan ng ating kapwa. Ang krus ang nag-uugnay sa tao tungo sa Diyos at 
+    tumutulong sa pagpapanumbalik ngating relasyon sa iba. Nakatitiyak ako na ang pinakamainam na lunas ay ang kapatawarang natanggap natin sa pamamagitan ng krus.
+    </p>
+    
+    <p class="j">
+        Ani Pablo, <i class="highlight-verse">"Ang pag-ibig ni Cristo ang naghahari sa amin, sapagkat natitiyak naming may 
+        isang namatay para sa lahat, kung kaya't ang lahat ay maibibilang nang patay. Namatay siya para sa lahat upang ang 
+        mga nabubuhay ngayon ay huwag nang mabuhay para sa sarili, kundi para kay Cristo na namatay at muling 
+        nabuhay para sa kanila" </i> - <b> (2 Corinto 5:14-15).</b>    
+    </p>
+    
+    <p class="j">
+        Mayroong walang hanggang kapangyarihan sa krus ng Kalbaryo. Ito lamang ang susi kung saan ang tao'y makakapag-ayos at makakaugnay sa Diyos.    
+    </p>
+    <p class="j">
+        Si Adan at Eva ay nagkasala nang suwayin nila ang iniutos ng Panginoon: <i class="highlight-verse">
+        "Makakain mo ang alinmang bungangkahoy sa halamanan, maliban sa bunga ng punongkahoy na nagbibigay ng kaalaman tungkol sa mabuti at masama.
+        Huwag na huwag mong kakainin ang bungang iyon, sapagkat sa araw na kainin mo iyon ay mamamatay ka"
+        </i> - <b>(Genesis 2:16-17).</b> Nang dahil sa kanilang pagsuway, kinailangan nilang iwan ang paraiso; 
+        nawala sa kanila ang lahat at kailangan nilang harapin ang mundong wala silang kaalam-alam. Makalipas 
+        ang libong taon, may muling naitanim na puno - ang krus ng Kalbaryo - at ang dala nito'y buhay, buhay na makahulugan.  
+    </p>
+    <p class="j">
+        Biniyan din tayo ng Diyos ng oportunidad na makipag-ayos sa mga tao sa ating kapaligiran sa pamamagitan ng 
+        krus. Noong tinuturuang manalangin ni Hesus ang Kaniyang mga disipulo, ang nag-iisang idinagdag Niya lamang 
+        dito ay ang pagpapatawad. Aniya, <i class="highlight-verse">"Sapagkat kung pinapatawad ninyo ang mga nagkakasala sa inyo, 
+        patatawarin din kayo ng inyong Ama na nasa langit. Ngunit kung hindi ninyo pinapatawad ang iba, hindi rin naman 
+        patatawarin ng inyong Ama ang inyong mga kasalanan" </i> - <b>(Mateo 6:14-15). </b>    
+    </p>
+    <p class="j">
+        Si Lewes Smedes, isang kilalang author at theology professor, ay minsang nagsabi, <i class="text-primary">"Kapag tayo'y nagpatawad, may pinalalaya 
+        tayong preso at ating madidiskubre na ang ating pinalayang bilanggo ay ang atin palang sarili."</i>. Ang pinakalunas sa puso ng tao ay ang pagpapatawad, 
+        para sa mga pinatawad maging sa mga nagpatawad.
+    </p>
+    <p class="j">
+    Ang kapatawaran ay lumalagot maging sa mga pinakamatitibay na tanikala, nagbubukas ng mga nakakandadong lagusan at 
+    nagwawasak ng pinakamatatatag na pader. Wala nang makahihigit pa sa kapatawaran, at ang pinakadaan para 
+    makatanggap at makapagbigay nito ay sa pamamagitan ng krus.
+    </p>
+    <p class="j">
+        Tandaan na ang krus ay gawa sa dalawang piraso ng kahoy - 
+        pababa at pahalang. Ang pababang kapiraso ay sumisimbulo sa pagkakaayos ng Diyos at ng tao, at ang pahalang na 
+        kapiraso ay sa pagkakaayos ng bawat nilalang. Ang layon ng krus ay kompleto na!
+    </p>
+    
+    </div>
+
+    <button class="accordion">Isabuhay ang Aralin</button>
+    <div class="panel">
+      <img src="images/live_in_the_lesson.png" class="responsive">
+      <p>
+            <ol>
+                    <li>
+                    <p class="j">Ang pinakamainam na lunas sa buong mundo ay ang kapatawarang ating natanggap sa krus. Magtala ng listahan 
+                                    ng pangalan ng mga taong kailangan mong patawarin. Sa iyong pananalangin, patawarin mo ang mga nakasakit at 
+                                    nanakit sa iyo.</p>
+                    <textarea id="answer-1"></textarea>
+                    </li>
+                    <li>
+                        <p class="j">Ano sa tingin mo ang pagkakamaling nagawa ng alibughang anak na naglalayo sa kaniya sa kaniyang ama? Maaari 
+                        mo bang tukuyin ang mga pagkakamaling iyon, kung maaari man, anu-ano ang mga iyon? </p>
+                        <textarea id="answer-2"></textarea>
+                        </li>
+                   </li>
+            </ol>
+      </p>
+    </div>
+ 
+    <button class="accordion">Alalahanin ang Aralin</button>
+    <div class="panel">
+      <img src="images/remember_the_lesson.png" class="responsive">
+      <p class="c"><i>Ang krus ay binubuo ng dalawang kahoy - isang pahalang at isang pababa. Ang pahalang na bahagi ay nagpapakahulugan sa 
+      pagpapatawad ng bawat tao sa isa't isa. Ang pababang bahagi naman ay nagpapakahulugan sa pagkakaayos ng Diyos at ng tao.</i></p>
+    </div>
+
+    <button class="accordion">Pag-aralan ang Salita</button>
+    <div id="study-word" class="panel">
+      <img src="images/study_the_word.png" class="responsive">  
+      <p>
+            <div class="tab">
+              <button class="tablinks" onclick="openCity(event, 'psalm7')">Psalm 7</button>
+              <button class="tablinks " onclick="openCity(event, 'proverbs3')">Proverbs 3</button>
+              <button class="tablinks active-2" onclick="openCity(event, 'john4')">John 4</button>
+            </div>
+             <div id="psalm7" class="tabcontent" >
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-1">
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-1" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+             </div>
+             <div id="proverbs3" class="tabcontent " >
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-2">
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-2" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+             </div>             
+             <div id="john4" class="tabcontent active-2" style="display:block">
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-3">
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-3" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+             </div>           
+      </p>
+    </div>
+
+  
+   </div> 
+  </body>
+</html>
+
+<script>
+var mbook_name;
+var mlesson_no;
+var mLessonGuideLeaderID;
+var mNetworkLeaderID;
+var mEnrollmentType;
+
+function loadData(LessonGuideLeaderID, NetworkLeaderID, EnrollmentType, book_name,lesson_no,  ans_1, ans_2, ans_3, ans_4,ans_5, ans_6, ans_7, ans_8, ans_9, study, word_1, word_2, word_3, word_4, word_5, word_6, word_7){
+    mLessonGuideLeaderID = LessonGuideLeaderID; mNetworkLeaderID = NetworkLeaderID; mEnrollmentType = EnrollmentType;
+    mbook_name = book_name; mlesson_no = lesson_no;
+    
+    document.getElementById("answer-1").value = ans_1;
+    document.getElementById("answer-2").value = ans_2;
+
+    var data = study.split(",");
+    if(data.length>1){
+        if(data[0]=='y') { document.getElementById("study-1").checked = true; }else{ document.getElementById("study-1").checked = false; }
+        if(data[1]=='y') { document.getElementById("study-2").checked = true; }else{ document.getElementById("study-2").checked = false; }
+        if(data[2]=='y') { document.getElementById("study-3").checked = true; }else{ document.getElementById("study-3").checked = false; }  
+    }
+    
+    if(word_1!="") {document.getElementById("study-the-word-1").innerHTML = word_1;}  if(word_2!="") {document.getElementById("study-the-word-2").innerHTML = word_2;} if(word_3!="") {document.getElementById("study-the-word-3").innerHTML = word_3;} if(word_4!="") {document.getElementById("study-the-word-4").innerHTML = word_4;} if(word_5!="") {document.getElementById("study-the-word-5").innerHTML = word_5;}
+    
+ }
+
+ function saveRecord(){
+      var answer_1 = document.getElementById("answer-1").value;
+      var answer_2 = document.getElementById("answer-2").value;
+      var answer_3 = "";
+      var answer_4 = "";
+      
+      var study_1 = document.getElementById("study-1");
+      var study_2 = document.getElementById("study-2");
+      var study_3 = document.getElementById("study-3");
+
+      
+      var study_indicator = "";
+      if (study_1.checked){ study_indicator = "y"; }else{ study_indicator = "n"; }
+      if (study_2.checked){ study_indicator += ",y"; }else{ study_indicator += ",n"; }
+      if (study_3.checked){ study_indicator += ",y"; }else{ study_indicator += ",n"; }
+
+     
+     JS.getData(mLessonGuideLeaderID, mNetworkLeaderID, mEnrollmentType, mbook_name, mlesson_no, answer_1,answer_2,answer_3,answer_4,'','','','','',study_indicator);
+ }
+ 
+/* accordiong control */
+var acc = document.getElementsByClassName("accordion"); var i;for (i = 0; i < acc.length; i++) {  acc[i].addEventListener("click", function() {    this.classList.toggle("active");    var panel = this.nextElementSibling;    if (panel.style.maxHeight) {      panel.style.maxHeight = null;    } else {      var total_height = panel.scrollHeight + 100;      panel.style.maxHeight = total_height + "px";    }   }); }
+/* tab control */  
+function openCity(evt, cityName) {      var i, tabcontent, tablinks;      tabcontent = document.getElementsByClassName("tabcontent");                        for (i = 0; i < tabcontent.length; i++) {        tabcontent[i].style.display = "none";      }      tablinks = document.getElementsByClassName("tablinks");      for (i = 0; i < tablinks.length; i++) {        tablinks[i].className = tablinks[i].className.replace(" active-2", "");      }      document.getElementById(cityName).style.display = "block";      evt.currentTarget.className += " active-2";                  var acc = document.getElementById("study-word");      var total_height = acc.scrollHeight + tabcontent.scrollHeight + 100;      acc.style.maxHeight = total_height + "px";   acc.style.Height = total_height + "px";          }   
+
+</script>

@@ -1,0 +1,10 @@
+[02-Dec-2022 08:59:15 UTC] PHP Warning:  require(../data-config.php): Failed to open stream: No such file or directory in /home/tgscwozb/public_html/app/android-sql/g12/validation/validate_email_address.php on line 3
+[02-Dec-2022 08:59:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../data-config.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/tgscwozb/public_html/app/android-sql/g12/validation/validate_email_address.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/validation/validate_email_address.php on line 3
+[02-Dec-2022 09:17:02 UTC] PHP Warning:  require(../data-config.php): Failed to open stream: No such file or directory in /home/tgscwozb/public_html/app/android-sql/g12/validation/username_checker.php on line 3
+[02-Dec-2022 09:17:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../data-config.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/tgscwozb/public_html/app/android-sql/g12/validation/username_checker.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/validation/username_checker.php on line 3

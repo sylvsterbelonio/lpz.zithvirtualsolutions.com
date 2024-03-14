@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title></title>
+  <style>
+                        :root { --_border: #5f5f5f;  --_dark_first: #3a0000; --separator_light: #ececec; --_light_first: #8b0000; --_first: #660000; --_light_second:#fff7f7; --_second:#FFF3F0; --_third:#868784; --_fourth:#F9DD4D; --_super_dark_fifth:#0a1a29; --_dark_fifth:#0a1a29; --_fifth:#102E4A; --_six:#313628; --_light_seven:#1ebabd; --_seven:#168B8D; }
+                        *{font-family: Arial, Geneva, Helvetica, sans-serif;-webkit-user-select: none;}
+                        .text-default {color :#757575} .text-primary { color: #4fad8a;}.text-error { color: #dc3545;}.text-success {color: #198754}
+                        .text-secondary {color: #757575;}
+                        .text-super-light-primary { color: #e11919 }
+                        .text-light-primary { color: #66e2b2 }
+                        .font-italic { font-style: italic; } 
+                        .font-bold { font-weight: bold; } 
+                         body { width:100%; background-color: #FFF;margin: 0px; padding: 0px; height: 100%;} 
+                        .content{  padding: 1px 20px 20px 15px; } 
+                        .indent{margin-left:40px} 
+                        .j{text-align:justify;} 
+                        .i{font-style: italic;}
+                        .c {text-align:center}
+                        .p{text-align: justify;} 
+                        .headings{background-color: #4eab87;padding:8px} 
+                        .column { float: left; width: 50%; padding: 0px; }
+                        .row:after { content: ""; display: table; clear: both; }
+                        .mb-0{ margin-bottom:0dp; }
+                        .row{ padding-top:20px;margin-bottom:20px; }  
+                        .mt-1 {margin-top:10dp;}
+                        .verses{ display:none}
+                        .button-verse{width:30px;height:30px;background-color:#f9cece;border-color: #00000;display:inline;padding:3px;color:black}
+                        .button-verse-ext{display:inline;}
+                        .text-sm {font-size:10px;}
+                        .highlight-verse{background-color:#fff7bf;color:black}
+                        .bullet-none{list-style:none}
+                        span{text-align:justify}
+                        .sj{text-align: justify; display:block;}
+                        .responsive { width: 100%; height: auto;}                       
+                        hide {     transition: 1s ease height;   }                        
+                        show {    transition: 1s ease height;  }                       
+                        .tab {  border-radius: 20px 20px 0px 0px;  overflow: hidden;  border: 1px solid #4fad8a;  background-color: #4fad8a;  color:"#ffffff";   }
+                        .tab button {  background-color: inherit; color:#fff; float: left;  border: none;  outline: none;  cursor: pointer;  padding: 14px 16px;  transition: 0.3s;  font-size: 12px;    color:"#ffffff";     }
+                        .tab button:hover {   background-color: #68e1b4;    }
+                        .tab button.active-2 {   background-color: #3b8166; color:#fff  }  
+                        .tabcontent {  display: none;  background-color: #fff;  padding: 6px 12px;  border: 1px solid #ccc;  border-top: none; border-radius: 0px 0px 20px 20px; -webkit-animation: fadeEffect 1s; animation: fadeEffect 1s;   }
+                        .tabcontent-2 {   display: none;  background-color: #fff7bf;  padding: 6px 12px;  border: 1px solid #ccc;  border-top: none;  border-radius: 0px 0px 20px 20px;  -webkit-animation: fadeEffect 1s;  animation: fadeEffect 1s;  }                                        
+                        @-webkit-keyframes fadeEffect {  from {opacity: 0;}   to {opacity: 1;}   }
+                        @keyframes fadeEffect {  from {opacity: 0;}  to {opacity: 1;}  }                                                 
+                        .accordion {  background-color: #4eab87;  color: #fff;  cursor: pointer;  padding: 18px;  width: 100%;  border-top: none;border-right:none;border-left:none; border-bottom: 1px solid #2c937a;  text-align: left;  outline: none;  font-size: 15px;  transition: 0.4s;}
+                        .active, .accordion:hover {  background-color: #3b8166;border-top: none;border-right:none;border-left:none; border-bottom: 1px solid #306953;}
+                        .accordion:after {  content: '\002B';  color: #fff;  font-weight: bold;  float: right;  margin-left: 5px;}
+                        .active:after {  content: "\2212";}
+                        .panel {  padding: 0 18px;  background-color: white;  max-height: 0;  overflow: hidden;  transition: max-height 0.2s ease-out;  border-left: 1px solid #ccc;   border-right: 1px solid #ccc;  overflow-y: auto;  overflow-x:hidden;}                            
+                        #study-word {border-bottom: 1px solid var(--_border);}
+                        textarea {    width:100%;height:300px;    -webkit-border-radius: 10px;    -moz-border-radius: 10px;    border-radius: 10px;    border:solid 1px #ccc;     padding:10px;}   
+                        textarea:focus {     outline: none !important;    border-color: #4eab87;    box-shadow: 0 0 10px #4eab87; }                                                                      
+                        input{width:100%;    -webkit-border-radius: 10px;    -moz-border-radius: 10px;    border-radius: 10px;    border:solid 1px #ccc;     padding:10px;} 
+                        input:focus {     outline: none !important;    border-color: #4eab87;    box-shadow: 0 0 10px #4eab87; }       
+                        .btn {  background-color: #4eab87; /* Green */  border: none;  color: white;  padding: 8px 16px;  text-align: center;  text-decoration: none;  display: inline-block;  cursor: pointer;    -webkit-border-radius: 10px;    -moz-border-radius: 10px;  border-radius: 10px;}
+                        .btn:hover {  background-color: #3b8166;}      
+                        .container {  display: block;  position: relative;  padding-left: 35px;  margin-bottom: 12px;  cursor: pointer;  -webkit-user-select: none;  -moz-user-select: none;  -ms-user-select: none;  user-select: none;  }
+                        .container input {  position: absolute;  opacity: 0;  cursor: pointer;  height: 0;  width: 0;}
+                        .checkmark {  position: absolute;  top: 0;  left: 0;  height: 20px;  width: 20px;  background-color: #eee;}
+                        .container:hover input ~ .checkmark {  background-color: #ccc;}
+                        .container input:checked ~ .checkmark {  background-color: #4eab87;}
+                        .checkmark:after {  content: "";  position: absolute;  display: none;}
+                        .container input:checked ~ .checkmark:after {  display: block;}
+                        .container .checkmark:after {  left: 6px;  top: 2px;  width: 5px;  height: 10px;  border: solid white;  border-width: 0 3px 3px 0;  -webkit-transform: rotate(45deg);  -ms-transform: rotate(45deg);  transform: rotate(45deg);}
+                        .navbar {  overflow: hidden;  background-color: #4eab87;  position: fixed;  top: 0;  width: 100%;box-shadow: 0 4px 6px 0 rgba(0,0,0,.3);}
+                        .navbar a {  float: left;  display: block;  color: #f2f2f2;  text-align: center;  padding: 14px 16px;  text-decoration: none;  font-size: 17px;}
+                        .navbar #btnUpdate:hover {  background: #3b8166;  color: white;}
+                        .content-top{margin-top:45px}
+  </style>
+  <script> var normal_color = "#000000"; var normal_color_background = "#f9cece";  var active_color = "#ffffff";  var active_color_background = "#8b0000";</script>
+  </head>
+  <body>
+       
+   <div class="navbar">
+        <a><span class="" style="color:white">WEEK 1 | DAY 3</span></a>
+        <a href="javascript:void(0)" onclick="saveRecord()" id="btnUpdate"  style="float:right">Save Answers</a>
+    </div>
+   
+   <div class="content-top">
+   
+    <img class="responsive" src="images/week-1-learning-from-our-mistakes.jpg">
+   
+   <button class="accordion active">Topic</button>
+    <div class="panel" style="max-height:5000;height:auto">
+   
+    <h1 align=center>D  A  Y   3</h1>
+    <h2 align=center><b>IS IT TOO LATE FOR <span class="text-primary">RECONCILIATION?</span></b></h2>
+    
+    <p class="j">
+          According to the Oxford English Dictionary, the word <i class="text-primary">reconciliation</i> means <i class="text-primary">"the action of restoring estranged people or parties to 
+          friendship.</i> Reconciliation refers to the restoration of relationships. When God made us, 
+          He created us with the need to both give and receive love. What He desires most for humanity 
+          is genuine friendship - both with Him, and between each person and their neighbor. 
+          That was why God made a plan: He created the idea of marriage and family. However, because of Adam's disobedience, 
+          the plan was disrupted and rebellion and selfishness entered instead.   
+    </p>
+    <p class="j">
+            God still longs for there to be complete harmony; He wants us to be reconciled to Him and to the people around us.     
+    </p>
+    <p class="c">
+     <i class="highlight-verse">  "I will set out and go back to my father and say to him.. Father I have sinned against heaven and against you."</i> - <b> (Luke 15:18) </b>
+    </p>
+    <p class="j">
+        This young man determined that he would confess his sins, accept-ing responsibility for them whilst also seeking mercy. 
+        The writer of Proverbs said, <i class="highlight-verse">"Whoever conceals their sins does not prosper, but the one who confesses 
+        and renounces them finds mercy"</i> - <b> (Proverbs 28:13).</b> John wrote, <i class="highlight-verse">"If we confess our sins, he is faithful and just and will 
+        forgive us our sins and purify us from all unrighteousness" </i> - <b>(1 John 1:9).</b> The prodigal son decided to tell his father, 
+        <i class="text-primary">"...1 have sinned against heaven and against you"</i> (Luke 15:18).    
+    </p>
+    <p class="j">
+        When a person sins and offends God, they also offend those around them. Confession is the result of a repentant heart that knows it 
+        has strayed from the path and decides to turn around to get back on the right track. Our future is defined by such crucial moments.    
+    </p>
+    <p class="j">
+        The word <i class="text-primary">crucial</i> comes from the Latin word for cross.,4J It is no coincidence that the cross was made of two pieces of wood: 
+        one placed vertically and the other horizontally. The vertical beam speaks of us lifting our eyes to God. while the horizontal 
+        beam speaks about an awareness of the needs of our neighbor. The cross both reconciles people to God and helps us restore 
+        our relationships with others. I am confident that the best medicine in existence is the forgiveness we receive through the cross.    
+    </p>
+    <p class="j">
+        Paul said, <i class="highlight-verse">"For Christ's love compels us, because we are convinced that one died for all, and therefore all died 
+        And he died for all, that those who live should no longer live for themselves but for him who died for them and 
+        was raised again" </i> - <b> (2 Corinthians 5:14-15).</b>    
+    </p>
+    <p class="j">
+        There is unlimited power available at the cross of Calvary; it has be-come the only door through which man can be reconciled to God.     
+    </p>
+    <p class="j">
+        The first couple sinned when they disobeyed the Lord's instructions: <i class="highlight-verse">"You are free to eat from any tree in the garden; 
+        but you must not eat from the tree of the knowledge of good and evil, for when you eat from it you will certainly die" 
+        </i> - <b>(Genesis 2:16-17).</b> Because of their disobedience, they had to leave paradise; they lost everything and 
+        had to face a world they did not know. Thousands of years later, another tree was planted - the cross of Calvary - and its fruit is life and life to the full.    
+    </p>
+    <p class="j">
+        God has also given us the opportunity to be reconciled to the peo-ple around us through the cross. 
+        When Jesus was teaching His dis-ciples to pray, the only additional comment He made was about forgiveness. 
+        He said, <i class="highlight-verse">"For if you forgive other people when they sin against you, your heavenly Father will also 
+        forgive you. But if you do not forgive others their sins, your Father will not forgive your sins" </i> - <b>(Matthew 6:14-15). </b>    
+    </p>
+    <p class="j">
+        Lewis Smedes, a renowned author and theology professor, once wrote, <i class="text-primary">"When we forgive, we set a prisoner free 
+        and then discover that the prisoner we set free was us.</i>. The best medicine that exists for the human heart 
+        is forgiveness, as much for those who grant it as for those who receive it. Forgiveness breaks the strongest 
+        chains. opens the securest doors, and demolishes the sturdiest walls. There is nothing comparable 
+        to forgiveness, and the best way to both re-ceive and grant forgiveness is through the cross.    
+    </p>
+    <p class="j">
+        Remember that the cross was made of two pieces of wood - one horizontal and the other vertical. 
+        The vertical beam represents reconciliation between God and man and the horizontal beam speaks 
+        of reconciliation with others. The work of the cross is complete!    
+    </p>
+    
+    </div>
+
+    <button class="accordion">Live The Lesson</button>
+    <div class="panel">
+      <img src="images/live_in_the_lesson.png" class="responsive">
+      <p>
+            <ol>
+                    <li>
+                    <p class="j">The best medicine in the world is the forgiveness we receive at the cross. Write a 
+                                list of the people you need to forgive. In prayer, forgive those who have hurt and offended you.</p>
+                    <textarea id="answer-1"></textarea>
+                    </li>
+                    <li>
+                        <p class="j">What mistakes do you think the prodigal son made that kept him far away from his father? Can you identify with any of those mistakes, and if so, which ones? </p>
+                        <textarea id="answer-2"></textarea>
+                        </li>
+                   </li>
+            </ol>
+      </p>
+    </div>
+ 
+    <button class="accordion">Remember The Lesson</button>
+    <div class="panel">
+      <img src="images/remember_the_lesson.png" class="responsive">
+      <p class="c"><i>The cross was made of two pieces of wood - one horizontal and one vertical. The horizontal beam represents forgiveness between people and the vertical beam represents reconciliation with God.  </i></p>
+    </div>
+
+    <button class="accordion">Study The Word</button>
+    <div id="study-word" class="panel">
+      <img src="images/study_the_word.png" class="responsive">  
+      <p>
+            <div class="tab">
+              <button class="tablinks" onclick="openCity(event, 'psalm7')">Psalm 7</button>
+              <button class="tablinks " onclick="openCity(event, 'proverbs3')">Proverbs 3</button>
+              <button class="tablinks active-2" onclick="openCity(event, 'john4')">John 4</button>
+            </div>
+             <div id="psalm7" class="tabcontent" >
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-1">
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-1" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+             </div>
+             <div id="proverbs3" class="tabcontent " >
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-2">
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-2" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+             </div>             
+             <div id="john4" class="tabcontent active-2" style="display:block">
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-3">
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-3" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+             </div>           
+      </p>
+    </div>
+
+  
+   </div> 
+  </body>
+</html>
+
+<script>
+var mbook_name;
+var mlesson_no;
+var mLessonGuideLeaderID;
+var mNetworkLeaderID;
+var mEnrollmentType;
+
+function loadData(LessonGuideLeaderID, NetworkLeaderID, EnrollmentType, book_name,lesson_no,  ans_1, ans_2, ans_3, ans_4,ans_5, ans_6, ans_7, ans_8, ans_9, study, word_1, word_2, word_3, word_4, word_5, word_6, word_7){
+    mLessonGuideLeaderID = LessonGuideLeaderID; mNetworkLeaderID = NetworkLeaderID; mEnrollmentType = EnrollmentType;
+    mbook_name = book_name; mlesson_no = lesson_no;
+    
+    document.getElementById("answer-1").value = ans_1;
+    document.getElementById("answer-2").value = ans_2;
+
+    var data = study.split(",");
+    if(data.length>1){
+        if(data[0]=='y') { document.getElementById("study-1").checked = true; }else{ document.getElementById("study-1").checked = false; }
+        if(data[1]=='y') { document.getElementById("study-2").checked = true; }else{ document.getElementById("study-2").checked = false; }
+        if(data[2]=='y') { document.getElementById("study-3").checked = true; }else{ document.getElementById("study-3").checked = false; }  
+    }
+    
+    if(word_1!="") {document.getElementById("study-the-word-1").innerHTML = word_1;}  if(word_2!="") {document.getElementById("study-the-word-2").innerHTML = word_2;} if(word_3!="") {document.getElementById("study-the-word-3").innerHTML = word_3;} if(word_4!="") {document.getElementById("study-the-word-4").innerHTML = word_4;} if(word_5!="") {document.getElementById("study-the-word-5").innerHTML = word_5;}
+    
+ }
+
+ function saveRecord(){
+      var answer_1 = document.getElementById("answer-1").value;
+      var answer_2 = document.getElementById("answer-2").value;
+      var answer_3 = "";
+      var answer_4 = "";
+      
+      var study_1 = document.getElementById("study-1");
+      var study_2 = document.getElementById("study-2");
+      var study_3 = document.getElementById("study-3");
+
+      
+      var study_indicator = "";
+      if (study_1.checked){ study_indicator = "y"; }else{ study_indicator = "n"; }
+      if (study_2.checked){ study_indicator += ",y"; }else{ study_indicator += ",n"; }
+      if (study_3.checked){ study_indicator += ",y"; }else{ study_indicator += ",n"; }
+
+     
+     JS.getData(mLessonGuideLeaderID, mNetworkLeaderID, mEnrollmentType, mbook_name, mlesson_no, answer_1,answer_2,answer_3,answer_4,'','','','','',study_indicator);
+ }
+ 
+/* accordiong control */
+var acc = document.getElementsByClassName("accordion"); var i;for (i = 0; i < acc.length; i++) {  acc[i].addEventListener("click", function() {    this.classList.toggle("active");    var panel = this.nextElementSibling;    if (panel.style.maxHeight) {      panel.style.maxHeight = null;    } else {      var total_height = panel.scrollHeight + 100;      panel.style.maxHeight = total_height + "px";    }   }); }
+/* tab control */  
+function openCity(evt, cityName) {      var i, tabcontent, tablinks;      tabcontent = document.getElementsByClassName("tabcontent");                        for (i = 0; i < tabcontent.length; i++) {        tabcontent[i].style.display = "none";      }      tablinks = document.getElementsByClassName("tablinks");      for (i = 0; i < tablinks.length; i++) {        tablinks[i].className = tablinks[i].className.replace(" active-2", "");      }      document.getElementById(cityName).style.display = "block";      evt.currentTarget.className += " active-2";                  var acc = document.getElementById("study-word");      var total_height = acc.scrollHeight + tabcontent.scrollHeight + 100;      acc.style.maxHeight = total_height + "px";   acc.style.Height = total_height + "px";          }   
+
+</script>

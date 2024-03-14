@@ -1,0 +1,385 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title></title>
+  <style>
+                        :root { --_border: #5f5f5f;  --_dark_first: #3a0000; --separator_light: #ececec; --_light_first: #8b0000; --_first: #660000; --_light_second:#fff7f7; --_second:#FFF3F0; --_third:#868784; --_fourth:#F9DD4D; --_super_dark_fifth:#0a1a29; --_dark_fifth:#0a1a29; --_fifth:#102E4A; --_six:#313628; --_light_seven:#1ebabd; --_seven:#168B8D; }
+                        *{font-family: Arial, Geneva, Helvetica, sans-serif;-webkit-user-select: none;}
+                        .text-default {color :#757575} .text-primary { color: #4fad8a;}.text-error { color: #dc3545;}.text-success {color: #198754}
+                        .text-secondary {color: #757575;}
+                        .text-super-light-primary { color: #e11919 }
+                        .text-light-primary { color: #66e2b2 }
+                        .font-italic { font-style: italic; } 
+                        .font-bold { font-weight: bold; } 
+                         body { width:100%; background-color: #FFF;margin: 0px; padding: 0px; height: 100%;} 
+                        .content{  padding: 1px 20px 20px 15px; } 
+                        .indent{margin-left:40px} 
+                        .j{text-align:justify;} 
+                        .i{font-style: italic;}
+                        .c {text-align:center}
+                        .p{text-align: justify;} 
+                        .headings{background-color: #4eab87;padding:8px} 
+                        .column { float: left; width: 50%; padding: 0px; }
+                        .row:after { content: ""; display: table; clear: both; }
+                        .mb-0{ margin-bottom:0dp; }
+                        .row{ padding-top:20px;margin-bottom:20px; }  
+                        .mt-1 {margin-top:10dp;}
+                        .verses{ display:none}
+                        .button-verse{width:30px;height:30px;background-color:#f9cece;border-color: #00000;display:inline;padding:3px;color:black}
+                        .button-verse-ext{display:inline;}
+                        .text-sm {font-size:10px;}
+                        .highlight-verse{background-color:#fff7bf;color:black}
+                        .bullet-none{list-style:none}
+                        span{text-align:justify}
+                        .sj{text-align: justify; display:block;}
+                        .responsive { width: 100%; height: auto;}                       
+                        hide {     transition: 1s ease height;   }                        
+                        show {    transition: 1s ease height;  }                       
+                        .tab {  border-radius: 20px 20px 0px 0px;  overflow: hidden;  border: 1px solid #4fad8a;  background-color: #4fad8a;  color:"#ffffff";   }
+                        .tab button {  background-color: inherit; color:#fff; float: left;  border: none;  outline: none;  cursor: pointer;  padding: 14px 16px;  transition: 0.3s;  font-size: 12px;    color:"#ffffff";     }
+                        .tab button:hover {   background-color: #68e1b4;    }
+                        .tab button.active-2 {   background-color: #3b8166; color:#fff  }  
+                        .tabcontent {  display: none;  background-color: #fff;  padding: 6px 12px;  border: 1px solid #ccc;  border-top: none; border-radius: 0px 0px 20px 20px; -webkit-animation: fadeEffect 1s; animation: fadeEffect 1s;   }
+                        .tabcontent-2 {   display: none;  background-color: #fff7bf;  padding: 6px 12px;  border: 1px solid #ccc;  border-top: none;  border-radius: 0px 0px 20px 20px;  -webkit-animation: fadeEffect 1s;  animation: fadeEffect 1s;  }                                        
+                        @-webkit-keyframes fadeEffect {  from {opacity: 0;}   to {opacity: 1;}   }
+                        @keyframes fadeEffect {  from {opacity: 0;}  to {opacity: 1;}  }                                                 
+                        .accordion {  background-color: #4eab87;  color: #fff;  cursor: pointer;  padding: 18px;  width: 100%;  border-top: none;border-right:none;border-left:none; border-bottom: 1px solid #2c937a;  text-align: left;  outline: none;  font-size: 15px;  transition: 0.4s;}
+                        .active, .accordion:hover {  background-color: #3b8166;border-top: none;border-right:none;border-left:none; border-bottom: 1px solid #306953;}
+                        .accordion:after {  content: '\002B';  color: #fff;  font-weight: bold;  float: right;  margin-left: 5px;}
+                        .active:after {  content: "\2212";}
+                        .panel {  padding: 0 18px;  background-color: white;  max-height: 0;  overflow: hidden;  transition: max-height 0.2s ease-out;  border-left: 1px solid #ccc;   border-right: 1px solid #ccc;  overflow-y: auto;  overflow-x:hidden;}                            
+                        #study-word {border-bottom: 1px solid var(--_border);}
+                        textarea {    width:100%;height:300px;    -webkit-border-radius: 10px;    -moz-border-radius: 10px;    border-radius: 10px;    border:solid 1px #ccc;     padding:10px;}   
+                        textarea:focus {     outline: none !important;    border-color: #4eab87;    box-shadow: 0 0 10px #4eab87; }                                                                      
+                        input{width:100%;    -webkit-border-radius: 10px;    -moz-border-radius: 10px;    border-radius: 10px;    border:solid 1px #ccc;     padding:10px;} 
+                        input:focus {     outline: none !important;    border-color: #4eab87;    box-shadow: 0 0 10px #4eab87; }       
+                        .btn {  background-color: #4eab87; /* Green */  border: none;  color: white;  padding: 8px 16px;  text-align: center;  text-decoration: none;  display: inline-block;  cursor: pointer;    -webkit-border-radius: 10px;    -moz-border-radius: 10px;  border-radius: 10px;}
+                        .btn:hover {  background-color: #3b8166;}      
+                        .container {  display: block;  position: relative;  padding-left: 35px;  margin-bottom: 12px;  cursor: pointer;  -webkit-user-select: none;  -moz-user-select: none;  -ms-user-select: none;  user-select: none;  }
+                        .container input {  position: absolute;  opacity: 0;  cursor: pointer;  height: 0;  width: 0;}
+                        .checkmark {  position: absolute;  top: 0;  left: 0;  height: 20px;  width: 20px;  background-color: #eee;}
+                        .container:hover input ~ .checkmark {  background-color: #ccc;}
+                        .container input:checked ~ .checkmark {  background-color: #4eab87;}
+                        .checkmark:after {  content: "";  position: absolute;  display: none;}
+                        .container input:checked ~ .checkmark:after {  display: block;}
+                        .container .checkmark:after {  left: 6px;  top: 2px;  width: 5px;  height: 10px;  border: solid white;  border-width: 0 3px 3px 0;  -webkit-transform: rotate(45deg);  -ms-transform: rotate(45deg);  transform: rotate(45deg);}
+                        .navbar {  overflow: hidden;  background-color: #4eab87;  position: fixed;  top: 0;  width: 100%;box-shadow: 0 4px 6px 0 rgba(0,0,0,.3);}
+                        .navbar a {  float: left;  display: block;  color: #f2f2f2;  text-align: center;  padding: 14px 16px;  text-decoration: none;  font-size: 17px;}
+                        .navbar #btnUpdate:hover {  background: #3b8166;  color: white;}
+                        .content-top{margin-top:45px}
+  </style>
+  <script> var normal_color = "#000000"; var normal_color_background = "#f9cece";  var active_color = "#ffffff";  var active_color_background = "#8b0000";</script>
+  </head>
+  <body>
+       
+   <div class="navbar">
+        <a><span class="" style="color:white">WEEK 1 | DAY 2</span></a>
+        <a href="javascript:void(0)" onclick="saveRecord()" id="btnUpdate"  style="float:right">Save Answers</a>
+    </div>
+   
+   <div class="content-top">
+   
+    <img class="responsive" src="images/week-1-learning-from-our-mistakes.jpg">
+   
+   <button class="accordion active">Topic</button>
+    <div class="panel" style="max-height:5000;height:auto">
+   
+    <h1 align=center>D  A  Y   2</h1>
+    <h2 align=center><b>AN OPORTUNIDAD PARA SA <span class="text-primary">ENCOUNTER</span></b></h2>
+    
+
+    <p class="c">
+        <i>
+        <i class="highlight-verse">"Dahil sa ika'y kaluluwa, maging katawan at pag-iisip din, hindi mo matatagpuan ang taos-pusong kapayapaan, pagpapatawad at kasiguruhan sa piling ng Diyos hanggat hindi napupuspos ang iyong kaluluwa; at ang iyong kaluluwa'y hindi mapupuspos kapag ika'y hiwalay sa Diyos."</i>
+        <br>Billy Gra-
+        </i>    
+    </p>
+    
+    <img src="images/day_2_picture_2.png" class="responsive">
+    <p class="c">
+    <b>1. <span class="text-primary">"Ang ating desisyon ang naghiwalay sa atin mula sa Diyos."</span> </b>
+    </p>
+    <img src="images/day_2_picture_1.png" class="responsive">
+    <p class="c">
+    <b>2. <span class="text-primary">"Walang tulay na makaaabot sa Diyos. Liban sa isa."</span></b>
+    </p>
+    <img src="images/day_2_picture_3.png" class="responsive">
+    <p class="c">
+    <b>3. <span class="text-primary">"Ibinigay ng Diyos ang tanging daan. <br>Ang bawat isa'y kai- langang gumawa ng desisyon."</span></b>
+    </p>
+    <img src="images/day_2_picture_4.png" class="responsive">
+    <p class="c">
+    <b>4. <span class="text-primary">NASAAN KA?</span></b>
+    </p>
+     
+    <p class="j">
+            Bilang tao, nilalang tayo nang may karapatang makapamili. Bawat araw ng ating buhay ay bunga ng ating mga 
+            naging desisyon. Ang alibughang anak ay nakagawa ng mga maling desisyon. Ngunit ang masamang idinulot 
+            nito o consequences aynagbigay sa kaniya ng masidhing pagnanais na magkaroon ng pagbabago. Nagkaroon 
+            siya ng bagong oportunidad, ang makapagsimulang muli. Bagamat hindi ito naging madali para sa kaniya 
+            dahil ito'y nagtuturo sa kaniyang magpakababa - ang paglunok niya ng kaniyang pride at ang buong pusong 
+            pagdepende sa awa ng kaniyang ama - ang kaniyang pagnanais ng pagbabago'y nakatulong sa kaniyang piliin 
+            ang pinakamainam na desisyon. Tinanggap niya ang encounter sa kaniyang ama.    
+    </p>
+    
+    <p class="c">
+       <i class="highlight-verse">"Ngunit napag-isip-isip niya ang kanyang ginawa at nasabi niya sa sarili, 
+       'Labis-labis ang pagkain ng mga alila ng aking ama, samantalang ako'y namamatay dito sa gutom! 
+       Babalik ako sa aking ama at sasabihin ko sa kanya, "Ama, nagkasala po ako sa Diyos at sa inyo.'" </i> - <b> 
+       (Lucas 15:17-18a). </b>           
+    </p>
+
+    <p class="j">
+        Ang binata sa talinghaga ay nais makapamuhay sa sarili niyang kapamaraanan, 
+        tulad ng mga kabataan ngayon na pinahihintulutan ang rebelyon sa kanilang mga puso. 
+        Sa tingin nila, ang pagpapasakop sa awtoridad at ang disiplina sa kanilang mga tahanan 
+        ay nakapipigil sa kanilang kalayaan. Kinokonsidera nila ang kanilang mga sarili bilang 
+        may-akda o awtor ng kanilang kapalaran at naniniwalang ang kanilang mga magulang ay di 
+        marapat na makialam kung paano sila dapat mamuhay.   
+    </p>
+    <p class="j"> 
+        Ito mismo ang nangyari sa alibughang anak, malakas ang kaniyang loob na sabihin 
+        sa kaniyang ama na <i class="highlight-verse">"Ama, ibigay na po ninyo sa akin ang mamanahin ko"</i> - <b> (Lucas 15:12). </b>
+        Sa halip na makipagtalo ay ibinigay na lamang ng ama ang hinihingi ng kaniyang anak. 
+        Simula noong lumisan ang anak, ang bawat hakbang niya ay papalayo sa kaniyang ama na 
+        siya namang naglalapit sa kaniya sa kawalan. Sa isang iglap lamang, ang lahat ng kaniyang 
+        pag-aari ay mabilis na naglaho, at kaniyang natagpuan ang kaniyang sarili sa lugar ng 
+        pagkaabanduna at desperasyon, halos hindi niya na mapakain ang sarili niya:  
+    </p>
+    <ol>
+        <li><p>Nagtungo siya sa napakalayong lugar.</p></li>
+        <li><p>Nagpakasasa siya at sinayang ang kaniyang mga pag-aari.</p></li>
+        <li><p>Nilustay niya ang lahat ng kaniyang ari-arian. </p></li>
+    </ol>
+ 
+    <p class="j"> 
+        Sa kabila ng kaniyang pagpupursigi, ang kaya niya lamang mapasukang trabaho ay ang pagpapakain sa mga baboy.   
+    </p>
+    
+     <p class="j"> 
+            Sa kasagsagan ng mapapanglaw na sandali ng kaniyang buhay, sinimulan niyang ikompara 
+            ang kaniyang kasalukuyang kalagayan sa marangyang buhay na mayroon siya noon 
+            sa piling ng kaniyang ama. Kaniyang napagtanto na habang nagpapakain siya ng mga 
+            baboy at namamatay sa gutom, lahat ng mga tagapaglingkod ng kaniyang ama ay 
+            lumalabis pa ang pagkain. Ang realisasyon niyang iyon ang nagdala sa kaniya 
+            sa direksyon pabalik sa kanila upang ma-encounter ang kaniyang ama. Nakatitiyak 
+            siya na tatanggapin siyang muli nito at pagbubuksan ng pinto sa kabila mga maling 
+            desisyong pinili niya. Hindi man magkagayo'y tatanggapin parin siya bilang tagapaglingkod, 
+            lubos siyang natuwa sapagkat naisip niya iyon bago pa man mahuli ang lahat para sa kaniya.
+     </p>
+ 
+    </div>
+    
+    
+
+    <button class="accordion">Isabuhay ang Aralin</button>
+    <div class="panel">
+      <img src="images/live_in_the_lesson.png" class="responsive">
+      <p>
+            <ol>
+                    <li>
+                    <p class="j">May mga bagay na bang nasayang sa iyong buhay dahil sa mga maling desisyong nagawa mo, na kung kaya mo lang balikan ay babaguhin mo?</p>
+                    <textarea id="answer-1"></textarea>
+                    </li>
+                    <li>
+                        <p class="j">Saliksikin at alamin ang ibig sabihin ng "pagpapakababa sa harap ng Diyos". 
+                        Maaari kang maghanap sa iba't ibang materyales tulad ng diksyunaryo 
+                        at Biblia, o maaari mo ring tanungin ang iyong LifeClass guide.</p>
+                        <textarea id="answer-2"></textarea>
+                        </li>
+                    <li>
+                        <p class="j">Tulad ng pagpapakumbaba ng binata upang makabalik sa kaniyang ama, 
+                        nakasaad sa Biblia na hindi itatatwa ng Diyos ang mapagpakumbaba at mapagtapat na 
+                        puso (Awit 51:17). Maglaan ng panahon upang magpakumbaba sa harap ng Diyos at 
+                        naising makabalik sa Kaniya ng buong puso.</p>
+                        <textarea id="answer-3"></textarea>
+                   </li>
+            </ol>
+      </p>
+    </div>
+    
+    <button class="accordion">Alalahanin ang Aralin:</button>
+    <div class="panel">
+      <img src="images/remember_the_lesson.png" class="responsive">
+      <p class="c"><i>Lahat tayo'y mayroong pagkakataong makabalik sa bisig ng Diyos na punong puno ng pagmamahal - ngunit ang paggawa niyon ay isang personal na desisyon</i></p>
+    </div>
+
+    <button class="accordion">Pag-aralan ang Salita</button>
+        <div id="study-word" class="panel">
+      <img src="images/study_the_word.png" class="responsive">  
+      <p>
+            <div class="tab">
+              <button class="tablinks" onclick="openCity(event, 'psalm4')">Psalm 4</button>
+              <button class="tablinks" onclick="openCity(event, 'psalm5')">Psalm 5</button>
+              <button class="tablinks" onclick="openCity(event, 'psalm6')">Psalm 6</button>
+              <button class="tablinks" onclick="openCity(event, 'proverbs2')">Proverbs 2</button>
+              <button class="tablinks active-2" onclick="openCity(event, 'john2')">John 2</button>
+              <button class="tablinks" onclick="openCity(event, 'john3')">John 3</button>
+            </div>
+             <div id="psalm4" class="tabcontent" >
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-1">
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-1" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+
+             </div>
+             <div id="psalm5" class="tabcontent">
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-2">
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-2" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+             </div>
+             <div id="psalm6" class="tabcontent">
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-3">
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-3" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+             </div>
+             <div id="proverbs2" class="tabcontent">
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-4">
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-4" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+             </div>
+             <div id="john2" class="tabcontent active-2" style="display:block">
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-5">
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-5" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+             </div>
+             <div id="john3" class="tabcontent">
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-6">
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-6" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+             </div>             
+      </p>
+    </div>
+
+  
+   </div> 
+  </body>
+</html>
+
+<script>
+var mbook_name;
+var mlesson_no;
+var mLessonGuideLeaderID;
+var mNetworkLeaderID;
+var mEnrollmentType;
+
+//loadData("lessonGuide1","network1","enroll1","bookName","lesson2","ans1","ans2","ans3","ans4","ans5","ans6","ans7","ans8","ans9","n,n,n,n,n,n","word1","word2","word3","word4","word5","word6","word");
+
+function loadData(LessonGuideLeaderID, NetworkLeaderID, EnrollmentType, book_name,lesson_no,  ans_1, ans_2, ans_3, ans_4,ans_5, ans_6, ans_7, ans_8, ans_9, study, word_1, word_2, word_3, word_4, word_5, word_6, word_7){
+    mLessonGuideLeaderID = LessonGuideLeaderID; mNetworkLeaderID = NetworkLeaderID; mEnrollmentType = EnrollmentType;
+    mbook_name = book_name; mlesson_no = lesson_no;
+    
+    //THIS IS DYNAMIC THAT NEEDS TO BE RECORDED EVERY LESSONS///////////////////
+    if(ans_1!=""){document.getElementById("answer-1").value = ans_1;}
+    if(ans_2!=""){document.getElementById("answer-2").value = ans_2;}
+    if(ans_3!=""){document.getElementById("answer-3").value = ans_3;}
+    var data = study.split(",");
+    if(data.length>1){
+        if(data[0]=='y') { document.getElementById("study-1").checked = true; }else{ document.getElementById("study-1").checked = false; }
+        if(data[1]=='y') { document.getElementById("study-2").checked = true; }else{ document.getElementById("study-2").checked = false; }
+        if(data[2]=='y') { document.getElementById("study-3").checked = true; }else{ document.getElementById("study-3").checked = false; }
+        if(data[3]=='y') { document.getElementById("study-4").checked = true; }else{ document.getElementById("study-4").checked = false; }
+        if(data[4]=='y') { document.getElementById("study-5").checked = true; }else{ document.getElementById("study-5").checked = false; }    
+        if(data[5]=='y') { document.getElementById("study-6").checked = true; }else{ document.getElementById("study-6").checked = false; }     
+    }
+    ////////////////////////////////////////////////////////////////////////////
+    
+    if(word_1!="") {document.getElementById("study-the-word-1").innerHTML = word_1;} if(word_2!="") {document.getElementById("study-the-word-2").innerHTML = word_2;} if(word_3!="") {document.getElementById("study-the-word-3").innerHTML = word_3;} if(word_4!="") {document.getElementById("study-the-word-4").innerHTML = word_4;} if(word_5!="") {document.getElementById("study-the-word-5").innerHTML = word_5;} if(word_6!="") {document.getElementById("study-the-word-6").innerHTML = word_6;} if(word_7!="") {document.getElementById("study-the-word-7").innerHTML = word_7;}
+    
+ }
+
+ function saveRecord(){
+      var answer_1 = document.getElementById("answer-1").value;
+      var answer_2 = document.getElementById("answer-2").value;
+      var answer_3 = document.getElementById("answer-3").value;
+      var study_1 = document.getElementById("study-1");
+      var study_2 = document.getElementById("study-2");
+      var study_3 = document.getElementById("study-3");
+      var study_4 = document.getElementById("study-4");
+      var study_5 = document.getElementById("study-5");
+      var study_6 = document.getElementById("study-6");
+      
+      var study_indicator = "";
+      if (study_1.checked){ study_indicator = "y"; }else{ study_indicator = "n"; }
+      if (study_2.checked){ study_indicator += ",y"; }else{ study_indicator += ",n"; }
+      if (study_3.checked){ study_indicator += ",y"; }else{ study_indicator += ",n"; }
+      if (study_4.checked){ study_indicator += ",y"; }else{ study_indicator += ",n"; }
+      if (study_5.checked){ study_indicator += ",y"; }else{ study_indicator += ",n"; }
+      if (study_6.checked){ study_indicator += ",y"; }else{ study_indicator += ",n"; }
+     
+     JS.getData(mLessonGuideLeaderID, mNetworkLeaderID, mEnrollmentType, mbook_name, mlesson_no, answer_1,answer_2,answer_3,'','','','','','',study_indicator);
+ }
+ 
+/* accordiong control */
+var acc = document.getElementsByClassName("accordion"); var i;for (i = 0; i < acc.length; i++) {  acc[i].addEventListener("click", function() {    this.classList.toggle("active");    var panel = this.nextElementSibling;    if (panel.style.maxHeight) {      panel.style.maxHeight = null;    } else {      var total_height = panel.scrollHeight + 100;      panel.style.maxHeight = total_height + "px";    }   }); }
+/* tab control */  
+function openCity(evt, cityName) {      var i, tabcontent, tablinks;      tabcontent = document.getElementsByClassName("tabcontent");                        for (i = 0; i < tabcontent.length; i++) {        tabcontent[i].style.display = "none";      }      tablinks = document.getElementsByClassName("tablinks");      for (i = 0; i < tablinks.length; i++) {        tablinks[i].className = tablinks[i].className.replace(" active-2", "");      }      document.getElementById(cityName).style.display = "block";      evt.currentTarget.className += " active-2";                  var acc = document.getElementById("study-word");      var total_height = acc.scrollHeight + tabcontent.scrollHeight + 100;      acc.style.maxHeight = total_height + "px";   acc.style.Height = total_height + "px";          }   
+
+</script>

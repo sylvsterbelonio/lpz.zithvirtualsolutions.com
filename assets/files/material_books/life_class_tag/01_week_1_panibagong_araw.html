@@ -1,0 +1,349 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title></title>
+  <style>
+                        :root { --_border: #5f5f5f;  --_dark_first: #3a0000; --separator_light: #ececec; --_light_first: #8b0000; --_first: #660000; --_light_second:#fff7f7; --_second:#FFF3F0; --_third:#868784; --_fourth:#F9DD4D; --_super_dark_fifth:#0a1a29; --_dark_fifth:#0a1a29; --_fifth:#102E4A; --_six:#313628; --_light_seven:#1ebabd; --_seven:#168B8D; }
+                        *{font-family: Arial, Geneva, Helvetica, sans-serif;-webkit-user-select: none;}
+                        .text-default {color :#757575} .text-primary { color: #4fad8a;}.text-error { color: #dc3545;}.text-success {color: #198754}
+                        .text-secondary {color: #757575;}
+                        .text-super-light-primary { color: #e11919 }
+                        .text-light-primary { color: #66e2b2 }
+                        .font-italic { font-style: italic; } 
+                        .font-bold { font-weight: bold; } 
+                         body { width:100%; background-color: #FFF;margin: 0px; padding: 0px; height: 100%;} 
+                        .content{  padding: 1px 20px 20px 15px; } 
+                        .indent{margin-left:40px} 
+                        .j{text-align:justify;} 
+                        .i{font-style: italic;}
+                        .c {text-align:center}
+                        .p{text-align: justify;} 
+                        .headings{background-color: #4eab87;padding:8px} 
+                        .column { float: left; width: 50%; padding: 0px; }
+                        .row:after { content: ""; display: table; clear: both; }
+                        .mb-0{ margin-bottom:0dp; }
+                        .row{ padding-top:20px;margin-bottom:20px; }  
+                        .mt-1 {margin-top:10dp;}
+                        .verses{ display:none}
+                        .button-verse{width:30px;height:30px;background-color:#f9cece;border-color: #00000;display:inline;padding:3px;color:black}
+                        .button-verse-ext{display:inline;}
+                        .text-sm {font-size:10px;}
+                        .highlight-verse{background-color:#fff7bf;color:black}
+                        .bullet-none{list-style:none}
+                        span{text-align:justify}
+                        .sj{text-align: justify; display:block;}
+                        .responsive { width: 100%; height: auto;}                       
+                        hide {     transition: 1s ease height;   }                        
+                        show {    transition: 1s ease height;  }                       
+                        .tab {  border-radius: 20px 20px 0px 0px;  overflow: hidden;  border: 1px solid #4fad8a;  background-color: #4fad8a;  color:"#ffffff";   }
+                        .tab button {  background-color: inherit; color:#fff; float: left;  border: none;  outline: none;  cursor: pointer;  padding: 14px 16px;  transition: 0.3s;  font-size: 12px;    color:"#ffffff";     }
+                        .tab button:hover {   background-color: #68e1b4;    }
+                        .tab button.active-2 {   background-color: #3b8166; color:#fff  }  
+                        .tabcontent {  display: none;  background-color: #fff;  padding: 6px 12px;  border: 1px solid #ccc;  border-top: none; border-radius: 0px 0px 20px 20px; -webkit-animation: fadeEffect 1s; animation: fadeEffect 1s;   }
+                        .tabcontent-2 {   display: none;  background-color: #fff7bf;  padding: 6px 12px;  border: 1px solid #ccc;  border-top: none;  border-radius: 0px 0px 20px 20px;  -webkit-animation: fadeEffect 1s;  animation: fadeEffect 1s;  }                                        
+                        @-webkit-keyframes fadeEffect {  from {opacity: 0;}   to {opacity: 1;}   }
+                        @keyframes fadeEffect {  from {opacity: 0;}  to {opacity: 1;}  }                                                 
+                        .accordion {  background-color: #4eab87;  color: #fff;  cursor: pointer;  padding: 18px;  width: 100%;  border-top: none;border-right:none;border-left:none; border-bottom: 1px solid #2c937a;  text-align: left;  outline: none;  font-size: 15px;  transition: 0.4s;}
+                        .active, .accordion:hover {  background-color: #3b8166;border-top: none;border-right:none;border-left:none; border-bottom: 1px solid #306953;}
+                        .accordion:after {  content: '\002B';  color: #fff;  font-weight: bold;  float: right;  margin-left: 5px;}
+                        .active:after {  content: "\2212";}
+                        .panel {  padding: 0 18px;  background-color: white;  max-height: 0;  overflow: hidden;  transition: max-height 0.2s ease-out;  border-left: 1px solid #ccc;   border-right: 1px solid #ccc;  overflow-y: auto;  overflow-x:hidden;}                            
+                        #study-word {border-bottom: 1px solid var(--_border);}
+                        textarea {    width:100%;height:300px;    -webkit-border-radius: 10px;    -moz-border-radius: 10px;    border-radius: 10px;    border:solid 1px #ccc;     padding:10px;}   
+                        textarea:focus {     outline: none !important;    border-color: #4eab87;    box-shadow: 0 0 10px #4eab87; }                                                                      
+                        input{width:100%;    -webkit-border-radius: 10px;    -moz-border-radius: 10px;    border-radius: 10px;    border:solid 1px #ccc;     padding:10px;} 
+                        input:focus {     outline: none !important;    border-color: #4eab87;    box-shadow: 0 0 10px #4eab87; }       
+                        .btn {  background-color: #4eab87; /* Green */  border: none;  color: white;  padding: 8px 16px;  text-align: center;  text-decoration: none;  display: inline-block;  cursor: pointer;    -webkit-border-radius: 10px;    -moz-border-radius: 10px;  border-radius: 10px;}
+                        .btn:hover {  background-color: #3b8166;}      
+                        .container {  display: block;  position: relative;  padding-left: 35px;  margin-bottom: 12px;  cursor: pointer;  -webkit-user-select: none;  -moz-user-select: none;  -ms-user-select: none;  user-select: none;  }
+                        .container input {  position: absolute;  opacity: 0;  cursor: pointer;  height: 0;  width: 0;}
+                        .checkmark {  position: absolute;  top: 0;  left: 0;  height: 20px;  width: 20px;  background-color: #eee;}
+                        .container:hover input ~ .checkmark {  background-color: #ccc;}
+                        .container input:checked ~ .checkmark {  background-color: #4eab87;}
+                        .checkmark:after {  content: "";  position: absolute;  display: none;}
+                        .container input:checked ~ .checkmark:after {  display: block;}
+                        .container .checkmark:after {  left: 6px;  top: 2px;  width: 5px;  height: 10px;  border: solid white;  border-width: 0 3px 3px 0;  -webkit-transform: rotate(45deg);  -ms-transform: rotate(45deg);  transform: rotate(45deg);}
+                        .navbar {  overflow: hidden;  background-color: #4eab87;  position: fixed;  top: 0;  width: 100%;box-shadow: 0 4px 6px 0 rgba(0,0,0,.3);}
+                        .navbar a {  float: left;  display: block;  color: #f2f2f2;  text-align: center;  padding: 14px 16px;  text-decoration: none;  font-size: 17px;}
+                        .navbar #btnUpdate:hover {  background: #3b8166;  color: white;}
+                        .content-top{margin-top:45px}
+  </style>
+  <script> var normal_color = "#000000"; var normal_color_background = "#f9cece";  var active_color = "#ffffff";  var active_color_background = "#8b0000";</script>
+  </head>
+  <body>
+       
+   <div class="navbar">
+        <a style="color:white;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;"><span >WEEK 1 | DAY 1</a>
+        <a href="javascript:void(0)" onclick="saveRecord()" id="btnUpdate"  style="float:right">Save Answers</a>
+    </div>
+   
+   <div class="content-top">
+   
+    <img class="responsive" src="images/week-1-learning-from-our-mistakes.jpg">
+   
+   <button class="accordion active">Leksyon</button>
+    <div class="panel" style="max-height:5000;height:auto">
+   
+    <h1 align=center>A  R  A  W   1</h1>
+    <h2 align=center><b>ANG <span class="text-primary">PANIBAGONG</span> ARAW</b></h2>
+    
+
+    <p class="c">
+        <i>Si Henry Ford ay natanggal sa kaniyang unang trabaho at napilitang iwan ang unang dalawang kompanyang kaniyang 
+        pinagtrabahuhan bago naging matagumpay sa Ford Motor Company. Ang paghawak ni Beethoven sa biyolin ay 
+        kakaiba at mas gusto niyang tugtugin ang sarili niyang komposisyon kaysa sa pagpapabuti ng kaniyang istilo 
+        sa pagtugtog. Kahit na sinasabi ng kaniyang guro na wala siyang kinabukasan sa pagko-compose. 
+        Si Walt Disney man di'y nasisante sa kaniyang unang trabaho bilang job apprentice. Subalit kahit na nailimbag na marami siyang naging pagkakamali 
+        at pinansyal na kakapusan, nakapagtaguyod siya ng napakalaking motion picture empire, ang Disney. Si Albert Einstein ay bulol 
+        hanggang pitong taong gulang. Ang kaniyang guro ay binansagan siya bilang "mabagal ang pag-iisip, di kahalu-halubilo, at tuluyan 
+        nang hibang sa kaniyang walang katuturang panaginip" [1]. Siya ay natanggihan sa kaniyang unang tangka upang makapasok sa Polytechnique 
+        Institute sa Zurich at nang kaniya nang ipinasa ang kaniyang relativity paper bilang aplikasyon sa pagiging tutor sa University of Bern, ito ay ibinasura.</i>    
+    </p>
+    
+    <p class="j">
+        Ang pinaka-karaniwang sinulid na nagdurugtong sa mga kuwento ng apat na sikat na mga taong ito ay ang pagdedesisyon nila na hindi pa huli ang lahat upang magsimulang muli; sila'y nagsumikap sa kanilang mga pangarap at hindi hinayaang ang kanilang pinagdaraanan ang humulma sa kanilang kinabukasan. Ang Ford ay isa na ngayon sa pinakamalalaking automobile company sa mundo. Ang mga komposisyon ni Beethoven ay pinaniniwalaang imposible nang mas mapabuti pa; si Albert Einstein ngayon ay ama ng Theory of Relativity at pinangalanan bilang isa sa mga pinakamaimpluwensyang physicist ng ika-20 siglo; at binasag naman ng Walt Disney ang limitasyon ng animation at storytelling upang pukawin
+        ang imahinasyon ng mga bata't matatanda sa buong mundo. Ang pagkakamali ay maaaring maging parte na lamang ng nakaraan kung magdedesisyon ka na ngayon na mismo ang simula ng iyong bagong success story.
+    </p>
+    
+     
+    <p class="j">
+       Ang Biblia ay naglalahad ng kwento tungkol sa alibughang anak - isang kabataang lalake na tila baga'y nasa kaniya na ang lahat: 
+       amang nagmamahal, bubong na masisilungan, at lahat ng kaniyang kakailanganin para sa matiwasay na pamumuhay. Ngunit dumating 
+       sa panahong siya'y napagod na sa uri ng pamumuhay na mayroon siya. Nagsawa siyang makita at gawin ang mga bagay na araw-araw na 
+       lamang niyang nakikita at ginagawa. Nagdesisyon siyang ito na ang panahon para magsaliksik at magtuklas. Hiningi niya ang parte ng kaniyang mana ay humayo 
+       upang hanapin ang kaniyang layon o purpose - gusto niyang malaman ang dahilan kung bakit siya nabubuhay.         
+    </p>
+    
+    <p class="j">
+       Nang lisanan niya ang kaniyang tahanan, sinimulan niyang tahakin ang walang katiyakang landas. 
+       Kung saan ay napadpad siya sa isang napakalayong lupain. Bagamat ang mga hardin doo'y 
+       puno ng mga rosas, ang likuran ng mga pader na iyon ay puno ng kasawian sa buhay, sakit at pagdarahop. 
+    </p>
+
+    <p class="j"> 
+      Nabanggit ni Juan ang tatlong ilusyong lumilinlang sa nakararami: <i class="highlight-verse"> ang nasa ng laman, 
+      nasa ng mga mata at ang pagmamalaki</i> - <b> (1 Juan 2:16).</b> Ito'y maikukumpara sa mga disyertong nagbabalatkayong bukal. 
+      Nagbibigay sila ng maling realidad sa ating buhay, ngunit sa dulo'y nagdudulot ng walang katuturang 
+      buhay, kung saan ay wala ang pag-asa at pangarap. Ipinaliwanag ni Juan na ito ang pangunahing produkto 
+      ng mundo at ito ay hindi nagmumula sa Diyos Ama.
+    </p>
+ 
+    <p class="j"> 
+        Ang unang mukhang harding puno ng mga rosas ay naging nakadidiring kulungan na ng baboy. Ani Solomon:
+    </p>
+    
+     <p class="c"> 
+      <i class="highlight-verse">"May daang matuwid sa tingin ng tao, ngunit kamatayan ang dulo nito." <b>(Kawikaan 14:12)</b> </i>
+     </p>
+    
+    <p class="j"> 
+         <b> Ako ba'y lumalakad sa maling landas? </b>
+                   
+    </p>
+    
+    <p class="j"> 
+        Sa araw na ito; mayroon kang panibagong pagkakataon upang muling siyasatin ang iyong buhay at maging 
+        tapat sa iyong sarili: nauwi man sa kasarinlan ang alibughang anak, nagkaroon siya ng realisasyon. 
+        Kaniya nang malinaw na nakita ang <i class="text-primary">apat na mahalagang oportunidad</i> sa espiritwal na kamalayan na hindi 
+        lamang nagpabalik ng kaniyang buhay kung pati narin ng lahat ng bagay na nawala sa kaniya. 
+    </p>
+
+   
+    </div>
+
+    <button class="accordion">Isabuhay ang Aralin</button>
+    <div class="panel">
+      <img src="images/live_in_the_lesson.png" class="responsive">
+      <p>
+            <ol>
+                    <li>
+                    <p class="j">Anong mga bagong bagay ang gusto mong matutunan?</p>
+                    <textarea id="answer-1"></textarea>
+                    </li>
+                    <li>
+                        <p class="j">May kilala ka bang mayroong bagong natutunan (maaaring instrumento, linggwahe, sport, atbp.) kahit na maaaring sabihin ng iba na sila'y matanda na para gawin ito?</p>
+                        <textarea id="answer-2"></textarea>
+                        </li>
+                    <li>
+                    <p class="j">Tingnan ang mga sumusunod na salita sa diksyunaryo at isulat ang mga kahulugan nito: </p>
+                        <p>Desisyon:</p>  
+                        <input id="answer-3-a" type="text" placeholder="">
+                        <p>Pagbabago:</p>  
+                        <input id="answer-3-b" type="text" placeholder="">                  
+                    </li>
+                    <li>
+                        <p class="j">Kung mabibigyan ka ng pagkakataong may baguhin sa iyong buhay, anu-ano ang mga ito? Kung sa tingin mo'y hindi mo ito kayang baguhin, 
+                        ano sa tingin mo ang magagawa ng Diyos upang makapagdala ng pagbabago rito?</p>
+                        <textarea id="answer-4"></textarea>
+                   </li>
+            </ol>
+      </p>
+    </div>
+    
+    <button class="accordion">Alalahanin ang Aralin</button>
+    <div class="panel">
+      <img src="images/remember_the_lesson.png" class="responsive">
+      <p class="c"><i>Anuman ang mga pagkakamaling iyong nagawa, kailanma'y hindi magiging huli ang lahat sa iyo para magsimulang muli. </i></p>
+    </div>
+
+    <button class="accordion">Pag-aralan ang Salita:</button>
+    <div id="study-word" class="panel">
+      <img src="images/study_the_word.png" class="responsive">  
+      <p>
+            <div class="tab">
+              <button class="tablinks" onclick="openCity(event, 'psalm1')">Psalm 1</button>
+              <button class="tablinks" onclick="openCity(event, 'psalm2')">Psalm 2</button>
+              <button class="tablinks" onclick="openCity(event, 'psalm3')">Psalm 3</button>
+              <button class="tablinks" onclick="openCity(event, 'proverbs')">Proverbs 1</button>
+              <button class="tablinks active-2" onclick="openCity(event, 'john')">John 1</button>
+            </div>
+             <div id="psalm1" class="tabcontent" >
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-1">
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-1" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+
+             </div>
+             <div id="psalm2" class="tabcontent">
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-2">
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-2" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+             </div>
+             <div id="psalm3" class="tabcontent">
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-3">
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-3" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+             </div>
+             <div id="proverbs" class="tabcontent">
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-4">    
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-4" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+             </div>
+             <div id="john" class="tabcontent active-2" style="display:block">
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-5">                        
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-5" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+             </div>
+      </p>
+    </div>
+
+  
+   </div> 
+  </body>
+</html>
+
+<script>
+var mbook_name;
+var mlesson_no;
+var mLessonGuideLeaderID;
+var mNetworkLeaderID;
+var mEnrollmentType;
+
+function loadData(LessonGuideLeaderID, NetworkLeaderID, EnrollmentType, book_name,lesson_no,  ans_1, ans_2, ans_3, ans_4,ans_5, ans_6, ans_7, ans_8, ans_9, study, word_1, word_2, word_3, word_4, word_5, word_6, word_7){
+    mLessonGuideLeaderID = LessonGuideLeaderID; mNetworkLeaderID = NetworkLeaderID; mEnrollmentType = EnrollmentType;
+    mbook_name = book_name; mlesson_no = lesson_no;
+    
+    document.getElementById("answer-1").value = ans_1;
+    document.getElementById("answer-2").value = ans_2;
+    var data = ans_3.split("^");
+    if(data.length>1){
+        document.getElementById("answer-3-a").value = data[0];
+        document.getElementById("answer-3-b").value = data[1];
+    }
+    document.getElementById("answer-4").value = ans_4;
+    var data = study.split(",");
+    if(data.length>1){
+        if(data[0]=='y') { document.getElementById("study-1").checked = true; }else{ document.getElementById("study-1").checked = false; }
+        if(data[1]=='y') { document.getElementById("study-2").checked = true; }else{ document.getElementById("study-2").checked = false; }
+        if(data[2]=='y') { document.getElementById("study-3").checked = true; }else{ document.getElementById("study-3").checked = false; }
+        if(data[3]=='y') { document.getElementById("study-4").checked = true; }else{ document.getElementById("study-4").checked = false; }
+        if(data[4]=='y') { document.getElementById("study-5").checked = true; }else{ document.getElementById("study-5").checked = false; }    
+    }
+    
+    if(word_1!="") {document.getElementById("study-the-word-1").innerHTML = word_1;}  if(word_2!="") {document.getElementById("study-the-word-2").innerHTML = word_2;} if(word_3!="") {document.getElementById("study-the-word-3").innerHTML = word_3;} if(word_4!="") {document.getElementById("study-the-word-4").innerHTML = word_4;} if(word_5!="") {document.getElementById("study-the-word-5").innerHTML = word_5;}
+    
+ }
+
+ function saveRecord(){
+  var answer_1 = document.getElementById("answer-1").value;
+      var answer_2 = document.getElementById("answer-2").value;
+      var answer_3 = document.getElementById("answer-3-a").value + "^" + document.getElementById("answer-3-b").value;
+      var answer_4 = document.getElementById("answer-4").value;
+      var study_1 = document.getElementById("study-1");
+      var study_2 = document.getElementById("study-2");
+      var study_3 = document.getElementById("study-3");
+      var study_4 = document.getElementById("study-4");
+      var study_5 = document.getElementById("study-5");
+      
+      var study_indicator = "";
+      if (study_1.checked){ study_indicator = "y"; }else{ study_indicator = "n"; }
+      if (study_2.checked){ study_indicator += ",y"; }else{ study_indicator += ",n"; }
+      if (study_3.checked){ study_indicator += ",y"; }else{ study_indicator += ",n"; }
+      if (study_4.checked){ study_indicator += ",y"; }else{ study_indicator += ",n"; }
+      if (study_5.checked){ study_indicator += ",y"; }else{ study_indicator += ",n"; }
+     
+     JS.getData(mLessonGuideLeaderID, mNetworkLeaderID, mEnrollmentType, mbook_name, mlesson_no, answer_1,answer_2,answer_3,answer_4,'','','','','',study_indicator);
+ }
+ 
+/* accordiong control */
+var acc = document.getElementsByClassName("accordion"); var i;for (i = 0; i < acc.length; i++) {  acc[i].addEventListener("click", function() {    this.classList.toggle("active");    var panel = this.nextElementSibling;    if (panel.style.maxHeight) {      panel.style.maxHeight = null;    } else {      var total_height = panel.scrollHeight + 100;      panel.style.maxHeight = total_height + "px";    }   }); }
+/* tab control */  
+function openCity(evt, cityName) {      var i, tabcontent, tablinks;      tabcontent = document.getElementsByClassName("tabcontent");                        for (i = 0; i < tabcontent.length; i++) {        tabcontent[i].style.display = "none";      }      tablinks = document.getElementsByClassName("tablinks");      for (i = 0; i < tablinks.length; i++) {        tablinks[i].className = tablinks[i].className.replace(" active-2", "");      }      document.getElementById(cityName).style.display = "block";      evt.currentTarget.className += " active-2";                  var acc = document.getElementById("study-word");      var total_height = acc.scrollHeight + tabcontent.scrollHeight + 100;      acc.style.maxHeight = total_height + "px";   acc.style.Height = total_height + "px";          }   
+
+</script>

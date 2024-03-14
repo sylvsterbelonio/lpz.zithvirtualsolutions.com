@@ -1,0 +1,152 @@
+[02-Dec-2022 23:44:34 UTC] PHP Parse error:  syntax error, unexpected character 0x00 in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 55
+[02-Dec-2022 23:44:35 UTC] PHP Parse error:  syntax error, unexpected character 0x00 in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 55
+[02-Dec-2022 23:44:37 UTC] PHP Parse error:  syntax error, unexpected character 0x00 in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 55
+[02-Dec-2022 23:44:37 UTC] PHP Parse error:  syntax error, unexpected character 0x00 in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 55
+[02-Dec-2022 23:44:39 UTC] PHP Parse error:  syntax error, unexpected character 0x00 in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 55
+[02-Dec-2022 23:44:41 UTC] PHP Parse error:  syntax error, unexpected character 0x00 in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 55
+[02-Dec-2022 23:48:12 UTC] PHP Warning:  Undefined variable $conn in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 15
+[02-Dec-2022 23:48:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php:15
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php(65): username_check()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 15
+[02-Dec-2022 23:48:17 UTC] PHP Warning:  Undefined variable $conn in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 15
+[02-Dec-2022 23:48:17 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php:15
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php(65): username_check()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 15
+[02-Dec-2022 23:48:18 UTC] PHP Warning:  Undefined variable $conn in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 15
+[02-Dec-2022 23:48:18 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php:15
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php(65): username_check()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 15
+[02-Dec-2022 23:49:30 UTC] PHP Parse error:  Unclosed '{' on line 29 in /home/tgscwozb/public_html/app/android-sql/g12/validation/username_checker.php on line 35
+[02-Dec-2022 23:49:30 UTC] PHP Parse error:  Unclosed '{' on line 29 in /home/tgscwozb/public_html/app/android-sql/g12/validation/username_checker.php on line 35
+[02-Dec-2022 23:49:31 UTC] PHP Parse error:  Unclosed '{' on line 29 in /home/tgscwozb/public_html/app/android-sql/g12/validation/username_checker.php on line 35
+[02-Dec-2022 23:49:31 UTC] PHP Parse error:  Unclosed '{' on line 29 in /home/tgscwozb/public_html/app/android-sql/g12/validation/username_checker.php on line 35
+[02-Dec-2022 23:51:37 UTC] PHP Warning:  require(g12/validation/username_checker.php): Failed to open stream: No such file or directory in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 4
+[02-Dec-2022 23:51:37 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'g12/validation/username_checker.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 4
+[02-Dec-2022 23:58:41 UTC] PHP Warning:  Undefined variable $email_address in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 88
+[03-Dec-2022 00:08:26 UTC] PHP Warning:  Undefined variable $myString in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 100
+[03-Dec-2022 00:15:17 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "password" in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php:66
+Stack trace:
+#0 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 66
+[03-Dec-2022 00:57:06 UTC] PHP Parse error:  syntax error, unexpected token "public", expecting end of file in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 129
+[03-Dec-2022 00:57:14 UTC] PHP Parse error:  syntax error, unexpected token "public", expecting end of file in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 129
+[03-Dec-2022 00:59:10 UTC] PHP Parse error:  syntax error, unexpected token "public", expecting end of file in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 129
+[03-Dec-2022 01:00:23 UTC] PHP Parse error:  syntax error, unexpected token "public", expecting end of file in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 126
+[03-Dec-2022 01:00:26 UTC] PHP Parse error:  syntax error, unexpected token "public", expecting end of file in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 126
+[03-Dec-2022 01:00:26 UTC] PHP Parse error:  syntax error, unexpected token "public", expecting end of file in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 126
+[03-Dec-2022 01:00:28 UTC] PHP Parse error:  syntax error, unexpected token "public", expecting end of file in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 126
+[03-Dec-2022 01:00:29 UTC] PHP Parse error:  syntax error, unexpected token "public", expecting end of file in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 126
+[03-Dec-2022 01:01:28 UTC] PHP Parse error:  syntax error, unexpected token "public", expecting end of file in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 126
+[04-Dec-2022 03:36:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_fetch_array() in /home/tgscwozb/public_html/app/android-sql/g12/log_in.php:43
+Stack trace:
+#0 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/log_in.php on line 43
+[18-Dec-2022 23:45:17 UTC] PHP Parse error:  syntax error, unexpected variable "$result" in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 93
+[18-Dec-2022 23:49:36 UTC] PHP Parse error:  syntax error, unexpected variable "$result" in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 93
+[18-Dec-2022 23:49:38 UTC] PHP Parse error:  syntax error, unexpected variable "$result" in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 93
+[18-Dec-2022 23:49:38 UTC] PHP Parse error:  syntax error, unexpected variable "$result" in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 93
+[18-Dec-2022 23:50:30 UTC] PHP Parse error:  syntax error, unexpected variable "$arr" in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 96
+[18-Dec-2022 23:51:09 UTC] PHP Parse error:  syntax error, unexpected variable "$arr" in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 95
+[18-Dec-2022 23:51:11 UTC] PHP Parse error:  syntax error, unexpected variable "$arr" in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 95
+[18-Dec-2022 23:57:01 UTC] PHP Parse error:  syntax error, unexpected token "public", expecting end of file in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 153
+[18-Dec-2022 23:57:31 UTC] PHP Parse error:  syntax error, unexpected token "public", expecting end of file in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 153
+[18-Dec-2022 23:57:33 UTC] PHP Parse error:  syntax error, unexpected token "public", expecting end of file in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 153
+[18-Dec-2022 23:57:46 UTC] PHP Parse error:  syntax error, unexpected token "public", expecting end of file in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 153
+[18-Dec-2022 23:57:47 UTC] PHP Parse error:  syntax error, unexpected token "public", expecting end of file in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 153
+[18-Dec-2022 23:58:24 UTC] PHP Parse error:  syntax error, unexpected token "public", expecting end of file in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 153
+[25-Dec-2022 06:16:53 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ', '',, )' at line 2 in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php:25
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php(25): mysqli->query()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 25
+[25-Dec-2022 07:01:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function file_input_contents() in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 13
+[25-Dec-2022 07:02:05 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function file_input_contents() in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php:13
+Stack trace:
+#0 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 13
+[25-Dec-2022 07:10:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function file_input_contents() in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 16
+[25-Dec-2022 07:16:52 UTC] PHP Warning:  Undefined variable $fullpath in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 17
+[25-Dec-2022 07:16:52 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'MUID' doesn't have a default value in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php:23
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php(23): mysqli_query()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 23
+[25-Dec-2022 07:17:40 UTC] PHP Warning:  Undefined variable $fullpath in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 17
+[25-Dec-2022 07:19:10 UTC] PHP Warning:  Undefined variable $fullpath in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 18
+[25-Dec-2022 07:21:21 UTC] PHP Warning:  Undefined variable $fullpath in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 20
+[25-Dec-2022 07:22:34 UTC] PHP Warning:  Undefined variable $fullpath in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 19
+[25-Dec-2022 07:22:34 UTC] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php:19
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php(19): file_put_contents()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 19
+[25-Dec-2022 07:23:36 UTC] PHP Warning:  Undefined variable $fullpath in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 21
+[25-Dec-2022 07:24:26 UTC] PHP Warning:  Undefined variable $fullpath in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 20
+[25-Dec-2022 07:26:14 UTC] PHP Warning:  Undefined variable $fullpath in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 18
+[25-Dec-2022 07:26:14 UTC] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php:18
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php(18): file_put_contents()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 18
+[25-Dec-2022 07:26:47 UTC] PHP Warning:  Undefined variable $fullpath in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 18
+[25-Dec-2022 07:26:47 UTC] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php:18
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php(18): file_put_contents()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 18
+[25-Dec-2022 07:28:32 UTC] PHP Warning:  Undefined variable $fullpath in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 20
+[25-Dec-2022 07:28:32 UTC] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php:20
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php(20): file_put_contents()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 20
+[25-Dec-2022 07:32:05 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Field 'MUID' doesn't have a default value in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php:25
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php(25): mysqli->query()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 25
+[25-Dec-2022 09:29:17 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'image_source' in 'field list' in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php:23
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php(23): mysqli->query()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 23
+[25-Dec-2022 09:30:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'image_source' in 'field list' in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php:23
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php(23): mysqli->query()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 23
+[25-Dec-2022 09:34:19 UTC] PHP Warning:  Undefined array key "church_logo_local_source" in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 9
+[25-Dec-2022 09:34:19 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '55)' at line 1 in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php:24
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php(24): mysqli->query()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 24
+[25-Dec-2022 09:35:26 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '55)' at line 1 in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php:24
+Stack trace:
+#0 /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php(24): mysqli->query()
+#1 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 24
+[25-Dec-2022 09:43:28 UTC] PHP Warning:  require(../../data-config.php): Failed to open stream: No such file or directory in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 3
+[25-Dec-2022 09:43:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../../data-config.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/tgscwozb/public_html/app/android-sql/g12/image_file_upload.php on line 3
+[26-Dec-2022 13:46:06 UTC] PHP Warning:  Undefined variable $data in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 103
+[26-Dec-2022 13:49:06 UTC] PHP Warning:  Undefined variable $action in /home/tgscwozb/public_html/app/android-sql/g12/sign_up.php on line 97
+[26-Dec-2022 13:59:54 UTC] PHP Warning:  Undefined variable $requireAll in /home/tgscwozb/public_html/app/android-sql/g12/log_in.php on line 67
+[26-Dec-2022 13:59:54 UTC] PHP Warning:  Undefined variable $response in /home/tgscwozb/public_html/app/android-sql/g12/log_in.php on line 67

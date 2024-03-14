@@ -1,0 +1,289 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title></title>
+  <style>
+                        :root { --_border: #5f5f5f;  --_dark_first: #3a0000; --separator_light: #ececec; --_light_first: #8b0000; --_first: #660000; --_light_second:#fff7f7; --_second:#FFF3F0; --_third:#868784; --_fourth:#f2b909; --_super_dark_fifth:#0a1a29; --_dark_fifth:#0a1a29; --_fifth:#102E4A; --_six:#313628; --_light_seven:#1ebabd; --_seven:#168B8D; }
+                        *{font-family: Arial, Geneva, Helvetica, sans-serif;-webkit-user-select: none;}
+                        .text-default {color :#757575} .text-primary { color: var(--_seven);}.text-error { color: #dc3545;}.text-success {color: #198754}.text-secondary {color: #757575;}
+                        .text-super-light-primary { color: #e11919 }
+                        .text-light-primary { color: #66e2b2 }
+                        .font-italic { font-style: italic; } 
+                        .font-bold { font-weight: bold; } 
+                         body { width:100%; background-color: var(--_fifth);margin: 0px; padding: 0px; height: 100%;} 
+                        .content{  padding: 1px 20px 20px 15px; } 
+                        .indent{margin-left:40px} .j{text-align:justify;} .i{font-style: italic;}.c {text-align:center}.p{text-align: justify;} 
+                        .headings{background-color: var(--_dark_fifth);padding:8px} 
+                        .column { float: left; width: 50%; padding: 0px; }
+                        .row:after { content: ""; display: table; clear: both; }
+                        .mb-0{ margin-bottom:0dp; }
+                        .row{ padding-top:20px;margin-bottom:20px; }  
+                        .mt-1 {margin-top:10dp;}
+                        .verses{ display:none}
+                        .button-verse{width:30px;height:30px;background-color:#f9cece;border-color: #00000;display:inline;padding:3px;color:black}
+                        .button-verse-ext{display:inline;}
+                        .text-sm {font-size:10px;}
+                        .highlight-verse{background-color:var(--_light_seven);color:white}
+                        .bullet-none{list-style:none}
+                        span{text-align:justify}
+                        .sj{text-align: justify; display:block;}
+                        .responsive { width: 100%; height: auto;}                       
+                        hide {     transition: 1s ease height;   }                        
+                        show {    transition: 1s ease height;  }                       
+                        .tab {  border-radius: 20px 20px 0px 0px;  overflow: hidden;  border: 1px solid #4fad8a;  background-color: var(--_seven);  color:"#ffffff";   }
+                        .tab button {  background-color: inherit; color:#fff; float: left;  border: none;  outline: none;  cursor: pointer;  padding: 14px 16px;  transition: 0.3s;  font-size: 12px;    color:"#ffffff";     }
+                        .tab button:hover {   background-color: var(--_fourth);    }
+                        .tab button.active-2 {   background-color: var(--_fourth); color:#fff  }  
+                        .tabcontent {  display: none;  background-color: background-color: var(--_fifth);  padding: 6px 12px;  border: 1px solid #5f5f5f;  border-top: none; border-radius: 0px 0px 20px 20px; -webkit-animation: fadeEffect 1s; animation: fadeEffect 1s;   }
+                        @-webkit-keyframes fadeEffect {  from {opacity: 0;}   to {opacity: 1;}   }
+                        @keyframes fadeEffect {  from {opacity: 0;}  to {opacity: 1;}  }                                                 
+                        .accordion {  background-color: var(--_seven);  color: #fff;  border-top: none;border-right:none;border-left:none; border-bottom: 1px solid #147f81; pointer;  padding: 18px;  width: 100%;   text-align: left;  outline: none;  font-size: 15px;  transition: 0.4s;}
+                        .active, .accordion:hover {  background-color: var(--_fourth);border-top: none;border-right:none;border-left:none; border-bottom: 1px solid #ad8407;}
+                        .accordion:after {  content: '\002B';  color: #fff;  font-weight: bold;  float: right;  margin-left: 5px;}
+                        .active:after {  content: "\2212";}
+                        .panel {  padding: 0 18px; color:white;  background-color: var(--_fifth);  max-height: 0;  overflow: hidden;  transition: max-height 0.2s ease-out;    overflow-y: auto;  overflow-x:hidden;}                            
+                        #study-word {}
+                        textarea { color:white;   width:100%;height:300px;  background-color: var(--_dark_fifth);   -webkit-border-radius: 10px;    -moz-border-radius: 10px;    border-radius: 10px;    border:none;     padding:10px;}   
+                        textarea:focus {     outline: none !important;    border-color: var(--_light_seven);    box-shadow: 0 0 10px var(--_light_seven); }                                                                      
+                        input{width:100%;    -webkit-border-radius: 10px; color:white; background-color: var(--_dark_fifth);    -moz-border-radius: 10px;    border-radius: 10px;    border:solid 1px #212121;     padding:10px;} 
+                        input:focus {     outline: none !important;    border-color: var(--_light_seven);    box-shadow: 0 0 10px var(--_light_seven); }       
+                        .btn {  background-color: #4eab87; border: none;  color: white;  padding: 8px 16px;  text-align: center;  text-decoration: none;  display: inline-block;  cursor: pointer;    -webkit-border-radius: 10px;    -moz-border-radius: 10px;  border-radius: 10px;}
+                        .btn:hover {  background-color: #3b8166;}      
+                        .container {  display: block;  position: relative;  padding-left: 35px;  margin-bottom: 12px;  cursor: pointer;  -webkit-user-select: none;  -moz-user-select: none;  -ms-user-select: none;  user-select: none;  }
+                        .container input {  position: absolute;  opacity: 0;  cursor: pointer;  height: 0;  width: 0;}
+                        .checkmark {  position: absolute;  top: 0;  left: 0;  height: 20px;  width: 20px;  background-color: #eee;}
+                        .container:hover input ~ .checkmark {  background-color: #ccc;}
+                        .container input:checked ~ .checkmark {  background-color: var(--_fourth);}
+                        .checkmark:after {  content: "";  position: absolute;  display: none;}
+                        .container input:checked ~ .checkmark:after {  display: block;}
+                        .container .checkmark:after {  left: 6px;  top: 2px;  width: 5px;  height: 10px;  border: solid white;  border-width: 0 3px 3px 0;  -webkit-transform: rotate(45deg);  -ms-transform: rotate(45deg);  transform: rotate(45deg);}
+                        .navbar {  overflow: hidden;  background-color: var(--_seven);  position: fixed;  top: 0;  width: 100%;box-shadow: 0 4px 8px 0 rgba(0,0,0,.3);}
+                        .navbar a {  float: left;  display: block;  color: #f2f2f2;  text-align: center;  padding: 14px 16px;  text-decoration: none;  font-size: 17px;}
+                        .navbar #btnUpdate:hover {  background: var(--_fourth);  color: white;}
+                        .content-top{margin-top:45px}
+  </style>
+  <script> var normal_color = "#000000"; var normal_color_background = "#f9cece";  var active_color = "#ffffff";  var active_color_background = "#8b0000";</script>
+  </head>
+  <body>
+       
+   <div class="navbar">
+        <a><span class="" style="color:white">WEEK 1 | DAY 4</span></a>
+        <a href="javascript:void(0)" onclick="saveRecord()" id="btnUpdate"  style="float:right">Save Answers</a>
+    </div>
+   
+   <div class="content-top">
+   
+    <img class="responsive" src="images/week-1-learning-from-our-mistakes.jpg">
+   
+   <button class="accordion active">Topic</button>
+    <div class="panel" style="max-height:5000;height:auto">
+   
+    <h1 align=center>D  A  Y   4</h1>
+    <h2 align=center><b>AN OPPORTUNITY FOR <span class="text-primary">RESTORATION</span></b></h2>    
+        <p class="c">
+            <i class="highlight-verse">"But the father said to his servants, 'Quick! Bring the best robe and put it on him. Put a ring on his finger and sandals on his feet."'</i> <b>(Luke 15.22)</b> 
+        </p>    
+        <p class="j">
+          The clothes a person wears can say a lot about them. Our wardrobe often reflects our personality, our profession, our internal or external condition, 
+          or even how we feel on a certain day. Rachel Roy, a US fashion designer, said. <i>"What 1 found through clothing is that when you put on the right dress 
+          or you put on the right pair of glasses or suit, it can really make you remember what is beautiful about life.</i> '161 However, there are many who do not feel 
+          beautiful. regardless of what they wear. This is because they are wearing the wrong spiritual clothes. Just as in the natural, 
+          we all also have spiritual clothes that give beauty to who we are and reflect our spiritual condition.        
+        </p>
+        <p class="j">
+          Having made the decision to return home, this young man was sur-prised by the way his father welcomed him. The father told his servants 
+          to replace his son's filthy clothes with fine garments. This rep-resents what the Lord does for every person who decides to restore their 
+          relationship with their heavenly Father. We need to understand that the clothes of the young man in the parable are an allegory for how we 
+          have misused the precious life God has given us - per-mitting sin in our hearts has soiled our spiritual clothes and left us with many physical 
+          and emotional wounds. When the father saw the  condition of his son, he had compassion on him and called for his rancid, threadbare rags to be immediately exchanged for robes fit for a banquet.        
+        </p>
+        <p class="j">
+          When the prophet Zechariah had a vision of Joshua, the high priest, he said, "Now Joshua was dressed in filthy clothes as he stood be-fore the angel. 
+          The angel said to those who were standing before him, <i class="highlight-verse">"Take off his filthy clothes." Then he said to Joshua, "See, 
+          I have taken away your sin, and / will put fine garments on you - </i> <b> (Zecha riah 3:3-4)</b>. Those rags represented his past, sinful life, and were com-pletely removed.         
+        </p>
+        <p class="j">
+          The prodigal son arrived in his filthy clothes; he was unable to justify them before God, as they were the outward expression of all the 
+          evil he had been involved in since he had left his father's house. However, the love of God is so great that He removes our old clothes, 
+          which represent our nature contaminated by sin, and He clothes us in fine, splendid garments, which represent righteousness: 
+          <i class="highlight-verse">"God made him who had no sin to be sin for us, so that in him we might become the righteousness of God" </i> <b> (2 Corinthians 5:21)</b>.         
+        </p>
+        <p class="j">
+          One of Job's greatest desires was deliverance from his own sins. He exclaimed, <i class="highlight-verse">"Why do you not pardon my offenses and forgive my sins?' 
+          (Job 7:21). Later he himself answered, "But how can mere mortals prove their innocence before God?"  </i> <b>(Job 9:2).</b> The psalmist David said, 
+          <i class="highlight-verse">"No one can redeem the life of another or give to God a ransom for them - the ransom for a life is costly, no payment is ever enough"  </i> <b>(Psalm 49:7-8)</b>.          
+        </p>
+        <p class="j">
+          Despite our best efforts and good intentions, the stain of sin runs deep and we cannot remove it ourselves - only God can. 
+          The psalmist later wrote, <i class="highlight-verse">As far as the east is from the west, so far has he removed our transgressions from us. As a father 
+          has compassion on his children, so the Lord has compassion on those who fear him" </i> <b>(Psalm 103:12-13). </b>        
+        </p>
+        <p class="j">
+          Through the prophet Isaiah, the Lord said, <i class="highlight-verse">"You were sold for noth-ing, and without money you will be redeemed" 
+          </i> <b>(Isaiah 52:3).</b> Paul encouraged the Corinthians by saying, <i class="highlight-verse">"You were bought at a price. 
+          Therefore honor God with your bodies" </i> <b>(1 Corinthians 6:20).</b> Jesus paid the highest price that could ever be paid.         
+        </p>
+        <p class="j">
+          Every area of the young man's life was transformed: he was restored to his position as a son, his clothes were changed, 
+          and a ring was put on his finger (which represents the restoration of authority).         
+        </p>   
+    </div>
+
+
+    <button class="accordion">Live The Lesson</button>
+    <div class="panel">
+      <img src="images/live_in_the_lesson.png" class="responsive">
+      <p>
+            <ol>
+                    <li>
+                    <p class="j">What do royal robes represent and what do rags represent? Which do you think you are wearing today? </p>
+                    <textarea id="answer-1"></textarea>
+                    </li>
+            </ol>
+      </p>     
+    </div>
+ 
+    <button class="accordion">Remember The Lesson</button>
+    <div class="panel">
+      <img src="images/remember_the_lesson.png" class="responsive">
+      <p class="c"><i>The love of God restores me in every area of my life.   </i></p>
+    </div>
+
+    <button class="accordion">Study The Word</button>
+    <div id="study-word" class="panel">
+      <img src="images/study_the_word.png" class="responsive">  
+      <p>
+            <div class="tab">
+              <button class="tablinks" onclick="openCity(event, 'psalm8')">Psalm 8</button>
+              <button class="tablinks " onclick="openCity(event, 'psalm9')">Psalm 9</button>
+              <button class="tablinks active-2" onclick="openCity(event, 'proverbs4')">Proverbs 4</button>
+              <button class="tablinks" onclick="openCity(event, 'john5')">John 5</button>
+            </div>
+             <div id="psalm8" class="tabcontent" >
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-1">                     
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-1" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+
+             </div>
+             <div id="psalm9" class="tabcontent " >
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-2">
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-2" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+             </div>             
+             <div id="proverbs4" class="tabcontent active-2" style="display:block">
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-3">                  
+                         </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-3" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+             </div>     
+             <div id="john5" class="tabcontent">
+                    <p class="j">
+                      <i class="indent">
+                        <span id="study-the-word-4">                 
+                         </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-4" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+             </div>                     
+      </p>
+    </div>
+
+  
+   </div> 
+  </body>
+</html>
+
+<script>
+var mbook_name;
+var mlesson_no;
+var mLessonGuideLeaderID;
+var mNetworkLeaderID;
+var mEnrollmentType;
+
+function loadData(LessonGuideLeaderID, NetworkLeaderID, EnrollmentType, book_name,lesson_no,  ans_1, ans_2, ans_3, ans_4,ans_5, ans_6, ans_7, ans_8, ans_9, study, word_1, word_2, word_3, word_4, word_5, word_6, word_7){
+    mLessonGuideLeaderID = LessonGuideLeaderID; mNetworkLeaderID = NetworkLeaderID; mEnrollmentType = EnrollmentType;
+    mbook_name = book_name; mlesson_no = lesson_no;
+    
+    document.getElementById("answer-1").value = ans_1;
+
+    var data = study.split(",");
+    if(data.length>1){
+        if(data[0]=='y') { document.getElementById("study-1").checked = true; }else{ document.getElementById("study-1").checked = false; }
+        if(data[1]=='y') { document.getElementById("study-2").checked = true; }else{ document.getElementById("study-2").checked = false; }
+        if(data[2]=='y') { document.getElementById("study-3").checked = true; }else{ document.getElementById("study-3").checked = false; }  
+        if(data[3]=='y') { document.getElementById("study-4").checked = true; }else{ document.getElementById("study-4").checked = false; } 
+    }
+    
+    if(word_1!="") {document.getElementById("study-the-word-1").innerHTML = word_1;}  if(word_2!="") {document.getElementById("study-the-word-2").innerHTML = word_2;} if(word_3!="") {document.getElementById("study-the-word-3").innerHTML = word_3;} if(word_4!="") {document.getElementById("study-the-word-4").innerHTML = word_4;} if(word_5!="") {document.getElementById("study-the-word-5").innerHTML = word_5;} if(word_6!="") {document.getElementById("study-the-word-6").innerHTML = word_6;}  if(word_7!="") {document.getElementById("study-the-word-7").innerHTML = word_7;} 
+
+ }
+
+ function saveRecord(){
+      var answer_1 = document.getElementById("answer-1").value;
+      var answer_2 = "";
+      var answer_3 = "";
+      var answer_4 = "";
+      
+      var study_1 = document.getElementById("study-1");
+      var study_2 = document.getElementById("study-2");
+      var study_3 = document.getElementById("study-3");
+      var study_4 = document.getElementById("study-4");
+
+      
+      var study_indicator = "";
+      if (study_1.checked){ study_indicator = "y"; }else{ study_indicator = "n"; }
+      if (study_2.checked){ study_indicator += ",y"; }else{ study_indicator += ",n"; }
+      if (study_3.checked){ study_indicator += ",y"; }else{ study_indicator += ",n"; }
+      if (study_4.checked){ study_indicator += ",y"; }else{ study_indicator += ",n"; }
+
+     
+     JS.getData(mLessonGuideLeaderID, mNetworkLeaderID, mEnrollmentType, mbook_name, mlesson_no, answer_1,answer_2,answer_3,answer_4,'','','','','',study_indicator);
+ }
+ 
+/* accordiong control */
+var acc = document.getElementsByClassName("accordion"); var i;for (i = 0; i < acc.length; i++) {  acc[i].addEventListener("click", function() {    this.classList.toggle("active");    var panel = this.nextElementSibling;    if (panel.style.maxHeight) {      panel.style.maxHeight = null;    } else {      var total_height = panel.scrollHeight + 100;      panel.style.maxHeight = total_height + "px";    }   }); }
+/* tab control */  
+function openCity(evt, cityName) {      var i, tabcontent, tablinks;      tabcontent = document.getElementsByClassName("tabcontent");                        for (i = 0; i < tabcontent.length; i++) {        tabcontent[i].style.display = "none";      }      tablinks = document.getElementsByClassName("tablinks");      for (i = 0; i < tablinks.length; i++) {        tablinks[i].className = tablinks[i].className.replace(" active-2", "");      }      document.getElementById(cityName).style.display = "block";      evt.currentTarget.className += " active-2";                  var acc = document.getElementById("study-word");      var total_height = acc.scrollHeight + tabcontent.scrollHeight + 100;      acc.style.maxHeight = total_height + "px";   acc.style.Height = total_height + "px";          }   
+
+</script>

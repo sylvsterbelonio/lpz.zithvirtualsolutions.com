@@ -1,0 +1,344 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title></title>
+  <style>
+                        :root { --_border: #5f5f5f;  --_dark_first: #3a0000; --separator_light: #ececec; --_light_first: #8b0000; --_first: #660000; --_light_second:#fff7f7; --_second:#FFF3F0; --_third:#868784; --_fourth:#f2b909; --_super_dark_fifth:#0a1a29; --_dark_fifth:#0a1a29; --_fifth:#102E4A; --_six:#313628; --_light_seven:#1ebabd; --_seven:#168B8D; }
+                        *{font-family: Arial, Geneva, Helvetica, sans-serif;-webkit-user-select: none;}
+                        .text-default {color :#757575} .text-primary { color: var(--_seven);}.text-error { color: #dc3545;}.text-success {color: #198754}.text-secondary {color: #757575;}
+                        .text-super-light-primary { color: #e11919 }
+                        .text-light-primary { color: #66e2b2 }
+                        .font-italic { font-style: italic; } 
+                        .font-bold { font-weight: bold; } 
+                         body { width:100%; background-color: var(--_fifth);margin: 0px; padding: 0px; height: 100%;} 
+                        .content{  padding: 1px 20px 20px 15px; } 
+                        .indent{margin-left:40px} .j{text-align:justify;} .i{font-style: italic;}.c {text-align:center}.p{text-align: justify;} 
+                        .headings{background-color: var(--_dark_fifth);padding:8px} 
+                        .column { float: left; width: 50%; padding: 0px; }
+                        .row:after { content: ""; display: table; clear: both; }
+                        .mb-0{ margin-bottom:0dp; }
+                        .row{ padding-top:20px;margin-bottom:20px; }  
+                        .mt-1 {margin-top:10dp;}
+                        .verses{ display:none}
+                        .button-verse{width:30px;height:30px;background-color:#f9cece;border-color: #00000;display:inline;padding:3px;color:black}
+                        .button-verse-ext{display:inline;}
+                        .text-sm {font-size:10px;}
+                        .highlight-verse{background-color:var(--_light_seven);color:white}
+                        .bullet-none{list-style:none}
+                        span{text-align:justify}
+                        .sj{text-align: justify; display:block;}
+                        .responsive { width: 100%; height: auto;}                       
+                        hide {     transition: 1s ease height;   }                        
+                        show {    transition: 1s ease height;  }                       
+                        .tab {  border-radius: 20px 20px 0px 0px;  overflow: hidden;  border: 1px solid #4fad8a;  background-color: var(--_seven);  color:"#ffffff";   }
+                        .tab button {  background-color: inherit; color:#fff; float: left;  border: none;  outline: none;  cursor: pointer;  padding: 14px 16px;  transition: 0.3s;  font-size: 12px;    color:"#ffffff";     }
+                        .tab button:hover {   background-color: var(--_fourth);    }
+                        .tab button.active-2 {   background-color: var(--_fourth); color:#fff  }  
+                        .tabcontent {  display: none;  background-color: background-color: var(--_fifth);  padding: 6px 12px;  border: 1px solid #5f5f5f;  border-top: none; border-radius: 0px 0px 20px 20px; -webkit-animation: fadeEffect 1s; animation: fadeEffect 1s;   }
+                        @-webkit-keyframes fadeEffect {  from {opacity: 0;}   to {opacity: 1;}   }
+                        @keyframes fadeEffect {  from {opacity: 0;}  to {opacity: 1;}  }                                                 
+                        .accordion {  background-color: var(--_seven);  color: #fff;  border-top: none;border-right:none;border-left:none; border-bottom: 1px solid #147f81; pointer;  padding: 18px;  width: 100%;   text-align: left;  outline: none;  font-size: 15px;  transition: 0.4s;}
+                        .active, .accordion:hover {  background-color: var(--_fourth);border-top: none;border-right:none;border-left:none; border-bottom: 1px solid #ad8407;}
+                        .accordion:after {  content: '\002B';  color: #fff;  font-weight: bold;  float: right;  margin-left: 5px;}
+                        .active:after {  content: "\2212";}
+                        .panel {  padding: 0 18px; color:white;  background-color: var(--_fifth);  max-height: 0;  overflow: hidden;  transition: max-height 0.2s ease-out;    overflow-y: auto;  overflow-x:hidden;}                            
+                        #study-word {}
+                        textarea { color:white;   width:100%;height:300px;  background-color: var(--_dark_fifth);   -webkit-border-radius: 10px;    -moz-border-radius: 10px;    border-radius: 10px;    border:none;     padding:10px;}   
+                        textarea:focus {     outline: none !important;    border-color: var(--_light_seven);    box-shadow: 0 0 10px var(--_light_seven); }                                                                      
+                        input{width:100%;    -webkit-border-radius: 10px; color:white; background-color: var(--_dark_fifth);    -moz-border-radius: 10px;    border-radius: 10px;    border:solid 1px #212121;     padding:10px;} 
+                        input:focus {     outline: none !important;    border-color: var(--_light_seven);    box-shadow: 0 0 10px var(--_light_seven); }       
+                        .btn {  background-color: #4eab87; border: none;  color: white;  padding: 8px 16px;  text-align: center;  text-decoration: none;  display: inline-block;  cursor: pointer;    -webkit-border-radius: 10px;    -moz-border-radius: 10px;  border-radius: 10px;}
+                        .btn:hover {  background-color: #3b8166;}      
+                        .container {  display: block;  position: relative;  padding-left: 35px;  margin-bottom: 12px;  cursor: pointer;  -webkit-user-select: none;  -moz-user-select: none;  -ms-user-select: none;  user-select: none;  }
+                        .container input {  position: absolute;  opacity: 0;  cursor: pointer;  height: 0;  width: 0;}
+                        .checkmark {  position: absolute;  top: 0;  left: 0;  height: 20px;  width: 20px;  background-color: #eee;}
+                        .container:hover input ~ .checkmark {  background-color: #ccc;}
+                        .container input:checked ~ .checkmark {  background-color: var(--_fourth);}
+                        .checkmark:after {  content: "";  position: absolute;  display: none;}
+                        .container input:checked ~ .checkmark:after {  display: block;}
+                        .container .checkmark:after {  left: 6px;  top: 2px;  width: 5px;  height: 10px;  border: solid white;  border-width: 0 3px 3px 0;  -webkit-transform: rotate(45deg);  -ms-transform: rotate(45deg);  transform: rotate(45deg);}
+                        .navbar {  overflow: hidden;  background-color: var(--_seven);  position: fixed;  top: 0;  width: 100%;box-shadow: 0 4px 8px 0 rgba(0,0,0,.3);}
+                        .navbar a {  float: left;  display: block;  color: #f2f2f2;  text-align: center;  padding: 14px 16px;  text-decoration: none;  font-size: 17px;}
+                        .navbar #btnUpdate:hover {  background: var(--_fourth);  color: white;}
+                        .content-top{margin-top:45px}
+  </style>
+  <script> var normal_color = "#000000";  var normal_color_background = "#f9cece";  var active_color = "#ffffff";  var active_color_background = "#8b0000";</script>
+  </head>
+  <body>
+
+   <div class="navbar">
+        <a><span class="" style="color:white">WEEK 1 | DAY 1</a>
+        <a href="javascript:void(0)" onclick="saveRecord()" id="btnUpdate"  style="float:right">Save Answers</a>
+    </div>
+   
+   <div class="content-top">
+   
+    <img class="responsive" src="images/week-1-learning-from-our-mistakes.jpg">
+   
+   <button class="accordion active">Leksyon</button>
+    <div class="panel" style="max-height:5000;height:auto">
+   
+    <h1 align=center>A  D  L  A  W   1</h1>
+    <h2 align=center><b>ANG <span class="text-primary">BAG-ONG</span> ADLAW</b></h2>
+    
+
+    <p class="c">
+        <i>Si Henry Ford gipapahawa sa iyang unang trabaho ug kinahanglang mobiya sa iyang unang duha ka kompanya sa dili pa sa kataposan nahimong malampuson sa Ford Motor Company.
+        Si Beethoven awkward nga naggunit sa biyolin ug gipalabi ang pagtugtog sa iyang kaugalingon nga mga komposisyon kaysa pagpauswag sa iyang teknik, bisan pa ang iyang magtutudlo miingon
+        wala na siyay paglaom isip kompositor. Si Walt Disney gi-dismiss sa iyang unang trabaho isip usa ka art apprentice. Bisag daghan na kuno siyag nasinati
+        mga kapakyasan ug pinansyal nga pakigbisog sa tibuok niyang kinabuhi, siya sa ulahi nagpadayon sa pagtukod sa dako nga emperyo sa pelikula, ang Disney. Si Albert Einstein wala
+        pagsulti nga larino hangtod nga siya pito. Gihulagway siya sa iyang magtutudlo nga 'hinay sa pangisip, dili makig-uban ug naanod hangtod sa hangtod sa iyang binuang nga mga damgo.
+        Sa sinugdan gibalibaran siya sa pagsulod sa Polytech-nic Institute sa Zurich ug sa dihang gisumite niya ang iyang papel sa relativity aron suportahan ang iyang
+        aplikasyon nga mahimong magtutudlo sa Unibersidad sa Bern, kini gisalikway. </i>    
+    </p>
+    
+    <p class="j">
+        Usa ka komon nga hilo nga nagdagan sa mga istorya niining upat ka bantog nga mga tawo mao nga sila nakahukom nga dili pa ulahi ang pagsugod;
+        sila milahutay sa ilang mga damgo ug wala motugot sa ilang mga kahimtang sa pagtino sa ilang kaugmaon. 
+        Ang Ford mao na karon ang usa sa pinakadakong kompanya sa sakyanan sa kalibutan; Ang mga komposisyon ni Beethoven kaylap nga gituohan nga imposible nga pauswagon;
+        Si Albert Einstein nga
+        ang amahan sa Teorya sa Relativity ug giisip nga labing impluwensyal nga pisiko sa ika-20 nga Siglo; ug Walt Disney adunay
+        nagduso sa mga utlanan sa animation ug storytelling sa pagdilaab sa imahinasyon sa mga bata ug mga hamtong sa tibuok kalibutan. Ang kapakyasan mahimong
+        butang sa nangagi kung nakahukom ka nga karon mao ang sinugdanan sa usa ka bag-ong istorya sa kalampusan.
+    </p>
+    
+     
+    <p class="j">
+       Ang Bibliya nag-asoy sa istorya sa anak nga mausikon - usa ka batan-ong lalaki nga morag naa sa tanan: usa ka amahan nga nahigugma kaniya, usa ka atop sa iyang ulo,
+       ug ang tanan nga iyang gikinahanglan aron magkinabuhi nga lig-on. Apan niabot ang higayon nga kining batan-ong lalaki gikapoy sa iyang kinabuhi.
+       Naluya siya nga makakita sa parehas nga mga nawong ug nagbuhat sa parehas nga mga butang matag adlaw.  
+       Nakahukom siya nga panahon na sa pagsuhid. Nangutana siya sa iyang amahan
+       tungod sa iyang bahin sa kabilin ug milakaw siya sa pagpangita sa iyang katuyoan - gusto niyang mahibaw-an nganong buhi pa siya.    
+    </p>
+    
+    <p class="j">
+        Sa diha nga ang nawala nga anak mibiya sa panimalay, misugod siya sa wala mailhi nga dalan, nga sa katapusan mitultol kaniya ngadto sa usa ka layo kaayo nga yuta. Bisan tuod ang mga tanaman didto puno sa mga rosas,
+        luyo sa mga paril niini nahimutang lamang ang kagul-anan, sakit ug kasakit.
+    </p>
+
+    <p class="j"> 
+      Gihisgotan ni Juan ang tulo ka ilusyon nga nagpahisalaag sa kadaghanan: ang kailibgon sa unod, ang kaibog sa mata, ug ang garbo sa kinabuhi. (1 Juan 2:16).
+      Kini mahimong ikatandi sa mga desyerto nga nagtakuban ingong mga oasis; nagpresentar sila sa usa ka bakak nga kamatuoran, nga nagpahibalo sa mga kalipayan sa kalibutan ingon
+      butang nga makapatagbaw kanato sa kinabuhi. Apan, sa katapusan, sila miresulta sa usa ka wala matuman nga kinabuhi, nga walay mga paglaum ug mga damgo.
+      Gipasabut ni Juan nga kini mga timaan sa kalibutan ug nga kini dili gikan sa Dios nga Amahan.
+    </p>
+ 
+    <p class="j"> 
+        Ang sa sinugdan daw usa ka tanaman sa mga rosas nahimo nga usa ka hugaw nga kulungan sa baboy. Si Solomon miingon:
+    </p>
+    
+     <p class="c"> 
+      <i class="highlight-verse">"Adunay usa ka dalan nga makita nga husto, apan sa katapusan kini padulong sa kamatayon." <b>(Panultihon 14:12)</b> </i>
+     </p>
+    
+    <p class="j"> 
+         <b> Naglakaw ba ko sa sayop nga dalan? </b>
+                   
+    </p>
+    
+    <p class="j"> 
+        Karon, aduna kay bag-ong oportunidad nga susihon pag-usab ang imong kinabuhi ug magmatinud-anon
+          imong kaugalingon. Bisan tuod ang anak nga mausikon midangat sa tumang kaguol, usa ka kahayag ang misanag sa iyang panghunahuna.
+          Kana mao ang diha nga siya <i class="text-primary">tin-aw nga nakakita sa upat ka bililhon nga mga oportunidad</i> sa
+          espirituhanon nga gingharian nga dili lamang makapasig-uli sa iyang kinabuhi, apan makabawi usab sa tanan nga nawala kaniya.   
+    </p>
+
+   
+    </div>
+
+    <button class="accordion">Pagkinabuhi sa Leksyon</button>
+    <div class="panel">
+      <img src="images/live_in_the_lesson.png" class="responsive">
+      <p>
+            <ol>
+                    <li>
+                    <p class="j">Unsang bag-ong mga butang ang gusto nimong makat-unan?</p>
+                    <textarea id="answer-1"></textarea>
+                    </li>
+                    <li>
+                        <p class="j">Nakaila ka ba og bisan kinsa nga nakakat-on og bag-ong butang (usa ka instrumento, pinulongan, sport, ug uban pa), bisan pa nga ang uban naghunahuna nga sila tigulang na kaayo aron mahimo kini?</p>
+                        <textarea id="answer-2"></textarea>
+                        </li>
+                    <li>
+                    <p class="j">Pangitaa ang mosunod nga mga pulong sa usa ka diksyonaryo ug isulat ang ilang mga kahulugan: </p>
+                        <p>Desisyon:</p>  
+                        <input id="answer-3-a" type="text" placeholder="">
+                        <p>Pagbag-o:</p>  
+                        <input id="answer-3-b" type="text" placeholder="">                  
+                    </li>
+                    <li>
+                        <p class="j">Kung mahimo nimong pilion nga usbon ang usa ka butang sa imong kinabuhi, unsa kini? Kung dili nimo kini mabag-o, unsa ang imong buhaton
+                        Naghunahuna ba nga ang Dios makahimo sa paghimo sa pagbag-o?</p>
+                        <textarea id="answer-4"></textarea>
+                   </li>
+            </ol>
+      </p>
+    </div>
+    
+    <button class="accordion">Hinumdomi ang Leksyon</button>
+    <div class="panel">
+      <img src="images/remember_the_lesson.png" class="responsive">
+      <p class="c"><i>Bisan unsa pa nga mga kasaypanan ang imong nahimo, dili pa ulahi ang pagsugod pag-usab. </i></p>
+    </div>
+
+    <button class="accordion">Tun-i ang Pulong:</button>
+    <div id="study-word" class="panel">
+      <img src="images/study_the_word.png" class="responsive">  
+      <p>
+            <div class="tab">
+              <button class="tablinks" onclick="openCity(event, 'psalm1')">Psalm 1</button>
+              <button class="tablinks" onclick="openCity(event, 'psalm2')">Psalm 2</button>
+              <button class="tablinks" onclick="openCity(event, 'psalm3')">Psalm 3</button>
+              <button class="tablinks" onclick="openCity(event, 'proverbs')">Proverbs 1</button>
+              <button class="tablinks active-2" onclick="openCity(event, 'john')">John 1</button>
+            </div>
+             <div id="psalm1" class="tabcontent" >
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-1">
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-1" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+
+             </div>
+             <div id="psalm2" class="tabcontent">
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-2">
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-2" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+             </div>
+             <div id="psalm3" class="tabcontent">
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-3">
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-3" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+             </div>
+             <div id="proverbs" class="tabcontent">
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-4">    
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-4" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+             </div>
+             <div id="john" class="tabcontent active-2" style="display:block">
+                    <p class="j">
+                      <i class="indent">
+                      <span id="study-the-word-5">                        
+                      </span>
+                      </i>
+                    </p>  
+                    <div style = "width:100%;height:40px">
+                        <div style="float:right">
+                            <label class="container" >I have read it
+                              <input id="study-5" type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+             </div>
+      </p>
+    </div>
+
+  
+   </div> 
+  </body>
+</html>
+
+<script>
+var mbook_name;
+var mlesson_no;
+var mLessonGuideLeaderID;
+var mNetworkLeaderID;
+var mEnrollmentType;
+
+function loadData(LessonGuideLeaderID, NetworkLeaderID, EnrollmentType, book_name,lesson_no,  ans_1, ans_2, ans_3, ans_4,ans_5, ans_6, ans_7, ans_8, ans_9, study, word_1, word_2, word_3, word_4, word_5, word_6, word_7){
+    mLessonGuideLeaderID = LessonGuideLeaderID; mNetworkLeaderID = NetworkLeaderID; mEnrollmentType = EnrollmentType;
+    mbook_name = book_name; mlesson_no = lesson_no;
+    
+    document.getElementById("answer-1").value = ans_1;
+    document.getElementById("answer-2").value = ans_2;
+    var data = ans_3.split("^");
+    if(data.length>1){
+        document.getElementById("answer-3-a").value = data[0];
+        document.getElementById("answer-3-b").value = data[1];
+    }
+    document.getElementById("answer-4").value = ans_4;
+    var data = study.split(",");
+    if(data.length>1){
+        if(data[0]=='y') { document.getElementById("study-1").checked = true; }else{ document.getElementById("study-1").checked = false; }
+        if(data[1]=='y') { document.getElementById("study-2").checked = true; }else{ document.getElementById("study-2").checked = false; }
+        if(data[2]=='y') { document.getElementById("study-3").checked = true; }else{ document.getElementById("study-3").checked = false; }
+        if(data[3]=='y') { document.getElementById("study-4").checked = true; }else{ document.getElementById("study-4").checked = false; }
+        if(data[4]=='y') { document.getElementById("study-5").checked = true; }else{ document.getElementById("study-5").checked = false; }    
+    }
+    
+    if(word_1!="") {document.getElementById("study-the-word-1").innerHTML = word_1;}  if(word_2!="") {document.getElementById("study-the-word-2").innerHTML = word_2;} if(word_3!="") {document.getElementById("study-the-word-3").innerHTML = word_3;} if(word_4!="") {document.getElementById("study-the-word-4").innerHTML = word_4;} if(word_5!="") {document.getElementById("study-the-word-5").innerHTML = word_5;}
+    
+ }
+
+ function saveRecord(){
+  var answer_1 = document.getElementById("answer-1").value;
+      var answer_2 = document.getElementById("answer-2").value;
+      var answer_3 = document.getElementById("answer-3-a").value + "^" + document.getElementById("answer-3-b").value;
+      var answer_4 = document.getElementById("answer-4").value;
+      var study_1 = document.getElementById("study-1");
+      var study_2 = document.getElementById("study-2");
+      var study_3 = document.getElementById("study-3");
+      var study_4 = document.getElementById("study-4");
+      var study_5 = document.getElementById("study-5");
+      
+      var study_indicator = "";
+      if (study_1.checked){ study_indicator = "y"; }else{ study_indicator = "n"; }
+      if (study_2.checked){ study_indicator += ",y"; }else{ study_indicator += ",n"; }
+      if (study_3.checked){ study_indicator += ",y"; }else{ study_indicator += ",n"; }
+      if (study_4.checked){ study_indicator += ",y"; }else{ study_indicator += ",n"; }
+      if (study_5.checked){ study_indicator += ",y"; }else{ study_indicator += ",n"; }
+     
+     JS.getData(mLessonGuideLeaderID, mNetworkLeaderID, mEnrollmentType, mbook_name, mlesson_no, answer_1,answer_2,answer_3,answer_4,'','','','','',study_indicator);
+ }
+ 
+/* accordiong control */
+var acc = document.getElementsByClassName("accordion"); var i;for (i = 0; i < acc.length; i++) {  acc[i].addEventListener("click", function() {    this.classList.toggle("active");    var panel = this.nextElementSibling;    if (panel.style.maxHeight) {      panel.style.maxHeight = null;    } else {      var total_height = panel.scrollHeight + 100;      panel.style.maxHeight = total_height + "px";    }   }); }
+/* tab control */  
+function openCity(evt, cityName) {      var i, tabcontent, tablinks;      tabcontent = document.getElementsByClassName("tabcontent");                        for (i = 0; i < tabcontent.length; i++) {        tabcontent[i].style.display = "none";      }      tablinks = document.getElementsByClassName("tablinks");      for (i = 0; i < tablinks.length; i++) {        tablinks[i].className = tablinks[i].className.replace(" active-2", "");      }      document.getElementById(cityName).style.display = "block";      evt.currentTarget.className += " active-2";                  var acc = document.getElementById("study-word");      var total_height = acc.scrollHeight + tabcontent.scrollHeight + 100;      acc.style.maxHeight = total_height + "px";   acc.style.Height = total_height + "px";          }   
+
+</script>

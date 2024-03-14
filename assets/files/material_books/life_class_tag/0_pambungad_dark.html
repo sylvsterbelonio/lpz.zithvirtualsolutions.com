@@ -1,0 +1,281 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title></title>
+  <style>               
+                        :root { --_border: #5f5f5f;  --_dark_first: #3a0000; --separator_light: #ececec; --_light_first: #8b0000; --_first: #660000; --_light_second:#fff7f7; --_second:#FFF3F0; --_third:#868784; --_fourth:#f2b909; --_super_dark_fifth:#0a1a29; --_dark_fifth:#0a1a29; --_fifth:#102E4A; --_six:#313628; --_light_seven:#1ebabd; --_seven:#168B8D; }
+                        *{font-family: Arial, Geneva, Helvetica, sans-serif;-webkit-user-select: none;}
+                        .text-default {color :#757575} .text-primary { color: var(--_seven);}.text-error { color: #dc3545;}.text-success {color: #198754}.text-secondary {color: #757575;}
+                        .text-super-light-primary { color: #e11919 }
+                        .text-light-primary { color: #66e2b2 }
+                        .font-italic { font-style: italic; } 
+                        .font-bold { font-weight: bold; } 
+                         body { width:100%; background-color: var(--_fifth);margin: 0px; padding: 0px; height: 100%;} 
+                        .content{  padding: 1px 20px 20px 15px; } 
+                        .indent{margin-left:40px} .j{text-align:justify;} .i{font-style: italic;}.c {text-align:center}.p{text-align: justify;} 
+                        .headings{background-color: var(--_dark_fifth);padding:8px} 
+                        .column { float: left; width: 50%; padding: 0px; }
+                        .row:after { content: ""; display: table; clear: both; }
+                        .mb-0{ margin-bottom:0dp; }
+                        .row{ padding-top:20px;margin-bottom:20px; }  
+                        .mt-1 {margin-top:10dp;}
+                        .verses{ display:none}
+                        .button-verse{width:30px;height:30px;background-color:#f9cece;border-color: #00000;display:inline;padding:3px;color:black}
+                        .button-verse-ext{display:inline;}
+                        .text-sm {font-size:10px;}
+                        .highlight-verse{background-color:var(--_light_seven);color:white}
+                        .bullet-none{list-style:none}
+                        span{text-align:justify}
+                        .sj{text-align: justify; display:block;}
+                        .responsive { width: 100%; height: auto;}                       
+                        hide {     transition: 1s ease height;   }                        
+                        show {    transition: 1s ease height;  }                       
+                        .tab {  border-radius: 20px 20px 0px 0px;  overflow: hidden;  border: 1px solid #4fad8a;  background-color: var(--_seven);  color:"#ffffff";   }
+                        .tab button {  background-color: inherit; color:#fff; float: left;  border: none;  outline: none;  cursor: pointer;  padding: 14px 16px;  transition: 0.3s;  font-size: 12px;    color:"#ffffff";     }
+                        .tab button:hover {   background-color: var(--_fourth);    }
+                        .tab button.active-2 {   background-color: var(--_fourth); color:#fff  }  
+                        .tabcontent {  display: none;  background-color: background-color: var(--_fifth);  padding: 6px 12px;  border: 1px solid #5f5f5f;  border-top: none; border-radius: 0px 0px 20px 20px; -webkit-animation: fadeEffect 1s; animation: fadeEffect 1s;   }
+                        @-webkit-keyframes fadeEffect {  from {opacity: 0;}   to {opacity: 1;}   }
+                        @keyframes fadeEffect {  from {opacity: 0;}  to {opacity: 1;}  }                                                 
+                        .accordion {  background-color: var(--_seven);  color: #fff;  border-top: none;border-right:none;border-left:none; border-bottom: 1px solid #147f81; pointer;  padding: 18px;  width: 100%;   text-align: left;  outline: none;  font-size: 15px;  transition: 0.4s;}
+                        .active, .accordion:hover {  background-color: var(--_fourth);border-top: none;border-right:none;border-left:none; border-bottom: 1px solid #ad8407;}
+                        .accordion:after {  content: '\002B';  color: #fff;  font-weight: bold;  float: right;  margin-left: 5px;}
+                        .active:after {  content: "\2212";}
+                        .panel {  padding: 0 18px; color:white;  background-color: var(--_fifth);  max-height: 0;  overflow: hidden;  transition: max-height 0.2s ease-out;    overflow-y: auto;  overflow-x:hidden;}                            
+                        #study-word {}
+                        textarea { color:white;   width:100%;height:300px;  background-color: var(--_dark_fifth);   -webkit-border-radius: 10px;    -moz-border-radius: 10px;    border-radius: 10px;    border:none;     padding:10px;}   
+                        textarea:focus {     outline: none !important;    border-color: var(--_light_seven);    box-shadow: 0 0 10px var(--_light_seven); }                                                                      
+                        input{width:100%;    -webkit-border-radius: 10px; color:white; background-color: var(--_dark_fifth);    -moz-border-radius: 10px;    border-radius: 10px;    border:solid 1px #212121;     padding:10px;} 
+                        input:focus {     outline: none !important;    border-color: var(--_light_seven);    box-shadow: 0 0 10px var(--_light_seven); }       
+                        .btn {  background-color: #4eab87; border: none;  color: white;  padding: 8px 16px;  text-align: center;  text-decoration: none;  display: inline-block;  cursor: pointer;    -webkit-border-radius: 10px;    -moz-border-radius: 10px;  border-radius: 10px;}
+                        .btn:hover {  background-color: #3b8166;}      
+                        .container {  display: block;  position: relative;  padding-left: 35px;  margin-bottom: 12px;  cursor: pointer;  -webkit-user-select: none;  -moz-user-select: none;  -ms-user-select: none;  user-select: none;  }
+                        .container input {  position: absolute;  opacity: 0;  cursor: pointer;  height: 0;  width: 0;}
+                        .checkmark {  position: absolute;  top: 0;  left: 0;  height: 20px;  width: 20px;  background-color: #eee;}
+                        .container:hover input ~ .checkmark {  background-color: #ccc;}
+                        .container input:checked ~ .checkmark {  background-color: var(--_fourth);}
+                        .checkmark:after {  content: "";  position: absolute;  display: none;}
+                        .container input:checked ~ .checkmark:after {  display: block;}
+                        .container .checkmark:after {  left: 6px;  top: 2px;  width: 5px;  height: 10px;  border: solid white;  border-width: 0 3px 3px 0;  -webkit-transform: rotate(45deg);  -ms-transform: rotate(45deg);  transform: rotate(45deg);}
+                        .navbar {  overflow: hidden;  background-color: var(--_seven);  position: fixed;  top: 0;  width: 100%;box-shadow: 0 4px 8px 0 rgba(0,0,0,.3);}
+                        .navbar a {  float: left;  display: block;  color: #f2f2f2;  text-align: center;  padding: 14px 16px;  text-decoration: none;  font-size: 17px;}
+                        .navbar #btnUpdate:hover {  background: var(--_fourth);  color: white;}
+                        .content-top{margin-top:45px}
+  </style>
+  <script>
+                        var normal_color = "#ffffff";
+                        var normal_color_background = "#868784";
+                        var active_color = "#ffffff";
+                        var active_color_background = "#f2b909";
+  </script>
+  </head>
+  <body>
+   
+  
+ 
+   <h1 class="headings" align=center><span class="" style="color:white">PAMBUNGAD</span></h1>
+   
+   <p class="i" style="text-align:center"><b>Dear Student,</b></p>
+   
+   <p class="i" style="text-align:center">
+        Maligayang Pagdating sa <b class="text-primary"><i>LifeClass!</i></b> Dito ay matututunan mo ang personal na pagkonekta sa Diyos at kung paano magkaroon ng panibagong 
+        direksyon sa iyong buhay sa iyong pagsisimula sa pag-unawa at pagsasabuhay ng mga simple at praktikal na prinsipyong matatagpuan mo sa mga susunod na pahina. 
+   </p>
+   
+   <p class="j">
+       Ang encounter kay Hesus ang pinakamainam na karanasang maaaring magkaroon ang isang tao. 
+       Si Hesus ay di-pangkaraniwan na sa aking pagkakilala sa Kaniya, ang direksyon ng aking buhay ay nabago ng 
+       lubusan, na kung saan ang bakas ng aking madilim na kahapo'y tuluyan nang naglaho. Nagsimula 
+       kong makita ang mga bagay-bagay sa kakaibang perspektibo. Bigla Niyang dinala ang tunay na kahulugan 
+       sa aking araw-araw at aking napagtanto na akin lamang sinasayang ang aking oras sa mga panahong hindi ko pa 
+       Siya natatagpuan. Gusto ko na ngayong igugol ang bawat segundo ng aking buhay para sa Kaniya.
+   </p>
+   
+   <p class="j">
+        Tuluyan ko ngang naintindihan na nabubuhay tayo nang may kadahilanan, at ang matinding pagnanais ay napukaw sa aking damdamin na siyang nagtulak sa aking kumilos para sa Panginoon.   
+    </p>
+   
+   <p class="j">
+        Ang lahat ng pagbabagong aking naranasan ay resulta ng simple ngunit taos-pusong pananalangin. Sinabi ko kay Hesus 
+        na ipakita Niya ang Kaniyang sarili sa akin sa oras at lugar ding iyon upang aking malaman 
+        kung Siya ba ay totoo at kung Siya nga ang Diyos sa Banal na Kasulatan. Hindi ko na kinailangang 
+        maghintay sapagkat di kalauna'y natagpuan ko ang aking sarili sa presensya ng May-akda ng buhay. 
+        Nakadama ako ng magkakahalong emosyon: ako'y nanapaiyak, napahalakhak, at buong pusong nagpuri sa Diyos. Personal ko ngang nakilala si Hesus.
+   </p>
+
+   
+   <p class="j">
+        Ang aklat na nasa iyong mga kamay ngayon ay isinulat upang matulungan kang humakbang at magdesisyong 
+        magkaroon ng personal na encounter kay Hesus. Maingat naming idinesenyo ang pagkakasunod-sunod 
+        ng mga aralin at mga aktibidad na siyang makatutulong sa iyo upang lumago sa iyong personal at 
+        espiritwal na buhay sa susunod na siyam na linggo. Sa bawat linggo'y mayroong nakatakdang 
+        paksa, na siyang hinati-hati pa upang unti-unti ay mayroon kang matutunan tungkol sa Diyos sa bawat araw. 
+        Ang bawat aralin o lesson for the day ay 15-20 minuto lamang at mayroong apat na bahagi:   </p>
+   
+   <ul>
+   <li class="j"><b class="text-primary">Nilalaman:</b> Isang maiksing introduksyon sa mga punto ng paksa o main points at mga ideya ukol sa kaukulang paksang may kinalaman sa araling tinatahak sa buong linggo. </li>
+   <li class="j"><b class="text-primary">Isabuhay ang Aralin:</b> Dito'y mararanasan mo ang kakaibang mga aktibidad na siyang magbibigay daan sa iyong maisabuhay ang iyong natututunan. </li>
+   <li class="j"><b class="text-primary">Alalahanin ang Aralin:</b> Ito ay isang maiksing buod o summary ng aralin. Ang layon nito ay upang madali mong maintindihan ang iyong natutunan.  </li>
+   <li class="j"><b class="text-primary">Pag-aralan ang Salita:</b> Ito ay isang bible reading plan na makatutulong sa iyong mas molalim na maunawaon ang Salita ng Diyos. Ang planong ito'y idinesenyo upang matulungan kang mamuhunan (invest) ng 10 minuto kada (Draw sa pagbabasa ng Banal na Kasulatan. Bagamat may kahabaan ang ibang aralin o chapter kumpara sa iba, tila baga'y medyo mapapahaba ang iyong babasahin sa ibang mga (Draw, subalit marapat lamang na iyong mabasa ang mga ito sa kaukulang bilang ng oras kada araw.  </li>
+   </ul> 
+   
+   
+   
+
+   
+   
+    <p class="j">
+        Sa loob ng 63 araw ay magtitipon kayo bawat Iinggo bilang parte ng isang grupo na kung saan ang inyong guro ay tutulungan kayong mapalalim pa ang inyong pagkakaunawa ukol 
+         sa inyong paksa sa bawat Iinggo o topic of the week. Magkakaroon din kayo ng pagkakataong marinig ang mga buhay na nabago ni Kristo at kung paano nila naisabuhay ang 
+         kanilang natutunan sa Iinggong iyon. Mg bawat pagtitipon ay magiging interaktibo at puno ng impormasyon, at bilang isang grupo, magkakaroon din ng pagkakataong masagot 
+         ang inyong mga katanungan. 
+    </p>
+    <p class="j">
+        Ang aming panalangin ay kayo'y lumago, <i>"hanggang makamtan natin ang iisang pananampalataya at pagkakilala sa Anak ng Diyos, at maging ganap ang acing pagkatao ayon sa pagiging-ganap ni Cristo."</i> (Efeso 4:13) 
+    </p>
+    
+  
+   <h1 class="" align=center><span class="text-primary">Bakit Pumili ng LifeClass?</span></h1>
+   
+
+    <img class="responsive" src="images/empty_chair.jpg">
+    
+    <p class="p">
+    <b>Ganap na pangangalaga para sa mga bagong mananampalataya:</b><br>
+        Kapag nagpasya ang isang tao na sundin si Kristo sa unang pagkakataon, ang mga susunod na linggo ay mahalaga sa pagtatatag ng kanilang pananampalatayang Kristiyano.
+        Ang personal na oras ng pakikipag-ugnayan sa bawat mananampalataya bawat linggo ay nagbibigay ng pagkakataon sa lider ng simbahan na tunay na pangalagaan ang kanilang mga bagong mananampalataya.
+    </p>
+    
+    <p class="p">
+    <b>Ang kapangyarihan ng isang Pagtatagpo:</b><br>
+        Kapag ang isang bagong mananampalataya ay may pagkakataon na makipagkita sa Diyos sa personal na paraan, ang kanilang buhay ay magbabago magpakailanman.
+        Ang LifeClass ay tungkol sa pag-akay sa bawat mananampalataya na magkaroon ng personal na pakikipagtagpo kay Hesus.
+    </p>
+    
+    <p class="p">
+    <b>Bumubuo ng mahusay na mga gawi:</b><br>
+       Ang pinakamahalagang bagay para sa sinumang mananampalataya ay basahin ang Bibliya at kumonekta sa Diyos sa pamamagitan ng panalangin.
+        Layunin ng LifeClass na mabuo ang ugali na ito nang maaga sa paglalakad ng isang tao kasama ang Diyos sa pamamagitan ng isang simpleng plano sa Debosyonal at pagbabasa ng Bibliya.
+    </p>   
+ 
+    <p class="p">
+    <b>Nagtatatag ng mga pangunahing pundasyon:</b><br>
+        Bawat linggo ang bagong mananampalataya ay iniharap sa isang aral sa buhay na magpapatibay sa kanilang desisyon na sundin si Kristo.
+    </p>  
+    
+    <h1 align=center>MGA NILALAMAN</h1>
+    
+    <p class="j"><b>WEEK 1: Pagkatuto sa ating mga pogkakamali</b></p>
+    <p class="indent j"><span class="text-primary">DAY 1:</span> Isang Bagong Araw</p>
+    <p class="indent j"><span class="text-primary">DAY 2:</span> Isang Pagkakataon Para sa Isang Pagkikita</p>
+    <p class="indent j"><span class="text-primary">DAY 3:</span> Hindi pa Huli Para sa Pagkakasundo</p>
+    <p class="indent j"><span class="text-primary">DAY 4:</span> Isang Pagkakataon Para sa Pagpapanumbalik</p>
+    <p class="indent j"><span class="text-primary">DAY 5:</span> Isang Pagkakataon Para sa Probisyon</p>
+    <p class="indent j"><span class="text-primary">DAY 6:</span> Sino si Hesus</p>
+    <p class="indent j"><span class="text-primary">DAY 7:</span> Apat na Pagkakataon</p>
+    <p class="j"><b>WEEK 2: Ang best deal ng iyong buhay</b></p>
+    <p class="indent j"><span class="text-primary">DAY 8:</span> Ang Pinakamagandang Deal ng Iyong Buhay</p>
+    <p class="indent j"><span class="text-primary">DAY 9:</span> Si Hesus ang pumalit sa atin</p>
+    <p class="indent j"><span class="text-primary">DAY 10:</span> Ang Himala ng Palitan</p>
+    <p class="indent j"><span class="text-primary">DAY 11:</span> Kalayaan sa Paanan ng Krus</p>
+    <p class="indent j"><span class="text-primary">DAY 12:</span> Bawat Huling Patak ng Dugo</p>
+    <p class="indent j"><span class="text-primary">DAY 13:</span> Ang Walang Katumbas na Presyong Ibinayad ni Jesus Para sa Akin</p>
+    <p class="indent j"><span class="text-primary">DAY 14:</span> Pinag-iisipan ang KRUS</p>
+    <p class="j"><b>WEEK 3: Ang pinakamainam na karanasan ng iyong buhay</b></p>
+    <p class="indent j"><span class="text-primary">DAY 15:</span> Ang Pinakamagandang Karanasan</p>
+    <p class="indent j"><span class="text-primary">DAY 16:</span> Pagbawi ng Ating Paningin</p>
+    <p class="indent j"><span class="text-primary">DAY 17:</span> Nilikha Upang Lumago</p>
+    <p class="indent j"><span class="text-primary">DAY 18:</span> Isang Bagong Puso</p>
+    <p class="indent j"><span class="text-primary">DAY 19:</span> Isinilang sa Kabanalan</p>
+    <p class="indent j"><span class="text-primary">DAY 20:</span> Ipinanganak NG Espiritu</p>
+    <p class="indent j"><span class="text-primary">DAY 21:</span> Isang Buhay ng Pananampalataya</p>
+    <p class="j"><b>WEEK 4: Ang buhay ay isang pakikipagdigma</b></p>
+    <p class="indent j"><span class="text-primary">DAY 22:</span> Ang kaaway</p>
+    <p class="indent j"><span class="text-primary">DAY 23:</span> Isang Buhay ng Pananakop</p>
+    <p class="indent j"><span class="text-primary">DAY 24:</span> Ang aming Lihim na Armas</p>
+    <p class="indent j"><span class="text-primary">DAY 25:</span> Lahat ng Aking Mga Kasalanan ay Pinatawad</p>
+    <p class="indent j"><span class="text-primary">DAY 26:</span> Mas Maputi Kaysa Niyebe</p>
+    <p class="indent j"><span class="text-primary">DAY 27:</span> Na Para bang Hindi Ako Nagkasala</p>
+    <p class="indent j"><span class="text-primary">DAY 28:</span> Ihiwalay Para sa Diyos</p> 
+    <p class="j"><b>WEEK 5: ENCOUNTER</b></p>
+    <p class="indent j"><span class="text-primary">DAY 29:</span> Pagkatapos ng Encounter</p>
+    <p class="indent j"><span class="text-primary">DAY 30:</span> 180 Degrees</p>
+    <p class="indent j"><span class="text-primary">DAY 31:</span> Hawakan Kung Ano ang Iyo</p>
+    <p class="indent j"><span class="text-primary">DAY 32:</span> Ang Pinakamahusay na Gamot</p>
+    <p class="indent j"><span class="text-primary">DAY 33:</span> Protektahan ang Iyong Kalayaan</p>
+    <p class="indent j"><span class="text-primary">DAY 34:</span> Baguhin ang Iyong Bansa, Labindalawang Tao Sa Isang Panahon</p>
+    <p class="indent j"><span class="text-primary">DAY 35:</span> Espiritu Santo, Kailangan Kita!</p>   
+    <p class="j"><b>WEEK 6: Tuklasin ang sekretong babago sa iyong buhay</b></p>
+    <p class="indent j"><span class="text-primary">DAY 36:</span> Kailangan nating Personal na Makipag-ugnayan sa Diyos</p>
+    <p class="indent j"><span class="text-primary">DAY 37:</span> Naririnig ang Diyos (I)</p>
+    <p class="indent j"><span class="text-primary">DAY 38:</span> Nakikinig sa Diyos (11)</p>
+    <p class="indent j"><span class="text-primary">DAY 39:</span> Nagsasalita sa Diyos (1)</p>
+    <p class="indent j"><span class="text-primary">DAY 40:</span> Nagsasalita sa Diyos (II)</p>
+    <p class="indent j"><span class="text-primary">DAY 41:</span> Debosyonal</p>
+    <p class="indent j"><span class="text-primary">DAY 42:</span> Book Of Dreams</p>    
+    <p class="j"><b>WEEK 7: Ang mga desisyon mo ang tutukoy sa iyo</b></p>
+    <p class="indent j"><span class="text-primary">DAY 43:</span> Magpasya na Paglingkuran si Jesus nang Buong Puso Mo</p>
+    <p class="indent j"><span class="text-primary">DAY 44:</span> Magpasya Na Matatag Kapag Inaatake</p>
+    <p class="indent j"><span class="text-primary">DAY 45:</span> Magpasya na Maging Matatag Laban sa Iyong Sarili</p>
+    <p class="indent j"><span class="text-primary">DAY 46:</span> Magpasya na Lubusang Umasa sa Diyos</p>
+    <p class="indent j"><span class="text-primary">DAY 47:</span> Magpasya Upang Maging Isang Makapangyarihang Mandirigma</p>
+    <p class="indent j"><span class="text-primary">DAY 48:</span> Magpasya Upang Pumili ng Tagumpay</p>
+    <p class="indent j"><span class="text-primary">DAY 49:</span> Magpasya na Maglingkod sa Iba</p>          
+    <p class="j"><b>WEEK 8: Hindi na bababa pa kaysa sa pinakamainam ng Diyos</b></p>
+    <p class="indent j"><span class="text-primary">DAY 50:</span> Ako'y Anak O Anak Ng Diyos</p>
+    <p class="indent j"><span class="text-primary">DAY 51:</span> Ang Pinakamagandang Mana</p>
+    <p class="indent j"><span class="text-primary">DAY 52:</span> Ang Kalooban ng Diyos</p>
+    <p class="indent j"><span class="text-primary">DAY 53:</span> Pagtanggap sa Kaisipan ng Diyos</p>
+    <p class="indent j"><span class="text-primary">DAY 54:</span> Ang Diyos ay ang aking lakas</p>
+    <p class="indent j"><span class="text-primary">DAY 55:</span> Isang Nabagong Isip</p>
+    <p class="indent j"><span class="text-primary">DAY 56:</span> Ako ay Isang Mananagumpay</p>   
+    <p class="j"><b>WEEK 9: Ang bagong simula</b></p>
+    <p class="indent j"><span class="text-primary">DAY 57:</span> Magsisimulang Muli</p>
+    <p class="indent j"><span class="text-primary">DAY 58:</span> Sino ang May Oportunidad na Ito?</p>
+    <p class="indent j"><span class="text-primary">DAY 59:</span> Magagawa Ko Na Ba?</p>
+    <p class="indent j"><span class="text-primary">DAY 60:</span> Halimbawa ni Hesus</p>
+    <p class="indent j"><span class="text-primary">DAY 61:</span> Ano ang Kahulugan Niyan Para sa Akin</p>
+    <p class="indent j"><span class="text-primary">DAY 62:</span> Magpasya ka!</p>
+    <p class="indent j"><span class="text-primary">DAY 63:</span> Bagong buhay</p>      
+
+   </div>   </body>
+</html>
+
+<script>
+
+    function showLabelVerse(panel, verses, content){
+    showVerse(panel,verses, content);
+    }
+    
+    function showVerse(parent,verses, content) {   
+    
+      if (verses.style.display === "none") {
+        verses.style.display = "block";
+        parent.innerHTML="[-]";
+        parent.style.backgroundColor = active_color_background;
+        parent.style.color = active_color;
+        content.style.backgroundColor = active_color_background;
+        content.style.color = active_color;
+       
+        }
+      else if(verses.style.display ===""){
+        verses.style.display = "block";
+        parent.innerHTML="[-]";
+        parent.style.backgroundColor = active_color_background;
+        parent.style.color = active_color;
+        content.style.backgroundColor = active_color_background;
+        content.style.color = active_color;
+    
+      } else {
+        verses.style.display = "none";
+        parent.innerHTML="[+]";
+        parent.style.backgroundColor = normal_color_background;
+        parent.style.color = normal_color;
+        content.style.backgroundColor = normal_color_background;
+        content.style.color = normal_color;
+     
+      }
+    }
+</script>

@@ -1,0 +1,621 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  
+    <style>
+    :root {
+    --_dark_first: #3a0000;
+    --separator_light: #ececec;
+    --_light_first: #8b0000;
+    --_first: #660000;
+    --_light_second:#fff7f7;
+    --_second:#FFF3F0;
+    --_third:#868784;
+    --_fourth:#F9DD4D;
+    --_super_dark_fifth:#0a1a29;
+    --_dark_fifth:#0a1a29;
+    --_fifth:#102E4A;
+    --_six:#313628;
+    --_light_seven:#1ebabd;
+    --_seven:#168B8D;
+    }
+    
+
+                        *{font-family: Arial, Geneva, Helvetica, sans-serif; font-size:16px;color:#ffffff}
+                        .text-default {color :#757575} 
+                        .text-primary { color: #168B8D;}
+                        .text-error { color: #dc3545;}
+                        .text-success {color: #168B8D;background-color: #0d2439;padding:10px}
+                        .text-secondary {color: #757575;}
+                        .text-light-primary { color: #ffffff }
+                        .font-italic { font-style: italic; } 
+                        .font-bold { font-weight: bold; } 
+                         body { width:100%; background-color: #102E4A;margin: 0px; padding: 0px; height: 100%;} 
+                        .content{  padding: 70px 20px 20px 15px; } 
+                        .indent{margin-left:40px} 
+                        .j{text-align:justify;} 
+                        .c {text-align:center}
+                        .p{text-align: justify;} 
+                        .headings{background-color: #0d2439;padding:8px} 
+                        .column { float: left; width: 50%; padding: 0px; }
+                        .row:after { content: ""; display: table; clear: both; }
+                        .mb-0{ margin-bottom:0dp; }
+                        .row{ padding-top:20px;margin-bottom:20px; }  
+                        .mt-1 {margin-top:10dp;}
+                        .verses{ display:none}
+                        .button-verse{width:30px;height:30px;background-color:#d0e6f5;border-color: #00000;display:inline;padding:3px;color:black}
+                        .button-verse-ext{display:inline;}
+                        .text-sm {font-size:10px;}
+                        .highlight-verse{background-color:#fff7bf;color:black}
+                        .bullet-none{list-style:none}
+                        span{text-align:justify}
+                        
+                        
+                        /* Style the tab */ .tab { border-radius: 20px 20px 0px 0px; overflow: hidden; border: 1px solid #168B8D; background-color: #0d696b; color:"#ffffff";   }
+                        /* Style the buttons inside the tab */.tab button { background-color: inherit; float: left; border: none; outline: none;  cursor: pointer;  padding: 14px 16px;  transition: 0.3s;  font-size: 12px;  color:"#ffffff";   }
+                        /* Change background color of buttons on hover */ .tab button:hover {    background-color: #f2b909;  }
+                        /* Create an active/current tablink class */ .tab button.active {   background-color: #f2b909;   }
+                        /* Style the tab content */  .tabcontent {     display: none;  background-color: #168B8D;  padding: 6px 12px;  border: 1px solid #168B8D;  border-top: none;  border-radius: 0px 0px 20px 20px;  }                                       
+
+
+                        @keyframes fadeEffect { from {opacity: 0;} to {opacity: 1;} }
+                        
+                        .line {
+                            display: flex;
+                            align-items: flex-end;
+                            flex-wrap: wrap;
+                        }
+
+                        .chord-letter {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: left;
+                        }
+
+                        .no-space {
+                            margin-right: 0;
+                        }
+
+                        .space {
+                            margin-right: 0.33em;
+                        }
+
+                        .chord {    font-style: italic;   font-weight: bold;   font-size: 1.2em; padding:5px 0px 5px 0px  }
+                        .no-space .chord {   margin-right: 0.33em;  }  
+                        .word {   display: flex;   flex-direction: row;   align-items: flex-end;   }   /*the container must be positioned relative:*/
+                        .s-chord { background-color: var(--_light_seven); padding: 0px 5px 0px 5px;}
+
+
+        .custom-select{
+        background-color:var(--_fifth);padding:5px 5px 5px 10px;border-radius: 10px;margin-top:3px;margin-left:-20px;
+        border-color: var(--_fifth);
+		border-width: 1px 1px 1px 1px;
+        }
+        .select select,
+		.select option {
+			border: none;
+			outline: none;
+			font-size: 18px;
+			padding: 5px 55px 5px 5px;
+			background-color: var(--_fifth);
+			color: white;
+			-webkit-appearance: none; /* for Safari */
+			margin: 0;
+			border-radius: 0;
+		}
+		.custom-select:focus { 
+            outline: none !important;
+            border-color: var(--_light_seven);
+            box-shadow: 0 0 10px var(--_light_seven);
+         }
+
+
+
+
+
+.topnav {
+  overflow: hidden;
+  background-color: var(--_super_dark_fifth);
+  position: fixed;
+  top: 0;
+  width:100%;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: transparent;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+.item-content{
+display: flex;justify-content: center;align-items: center;height: 35px;
+}
+
+.popup {  position: relative;  display: inline-block;  cursor: pointer;  -webkit-user-select: none;  -moz-user-select: none;  -ms-user-select: none;  user-select: none;}
+.popup .popuptext {  visibility: hidden;  width: 100px;  background-color: var(--_dark_fifth);  color: white;  text-align: center;  border-radius: 6px;  padding: 8px 0;  position: absolute;  z-index: 1;  bottom: 125%;  left: 60%;  margin-bottom:8px;  margin-left: -80px;} /* The actual popup */
+.popup .popuptext::after {  content: "";  position: absolute;  top: 100%;  left: 50%;  margin-left: -5px;  color:white;  border-width: 5px;  border-style: solid;  border-color: var(--_dark_fifth) transparent transparent transparent;} /* Popup arrow */
+.popup .show {  visibility: visible;  -webkit-animation: fadeIn 1s;  animation: fadeIn 1s;} /* Toggle this class - hide and show the popup */
+.popup-content{display:none;background-color:white;position:absolute;z-index:99}
+
+/* customized checkbox */
+.container {  display: block;  position: relative;  padding-left: 35px;  margin-top: 5px;  cursor: pointer;  -webkit-user-select: none;  -moz-user-select: none;  -ms-user-select: none;  user-select: none;}
+.container input { position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0;}
+.checkmark { position: absolute;  top: 0;  left: 0;  height: 24px;  width: 24px;  background-color: var(--_fifth);  border: solid var(--_fifth);  border-width: 1px 1px 1px 1px;  border-radius: 6px;}
+.container:hover input ~ .checkmark {  background-color: var(--_fifth);}
+.container input:checked ~ .checkmark { background-color: var(--_light_seven);  border-color: var(--_light_seven);box-shadow: 0 0 10px var(--_light_seven);}
+.checkmark:after {  content: "";  position: absolute; display: none;}
+.container input:checked ~ .checkmark:after {  display: block;}
+.container input:focus {
+
+            outline: none !important;
+           
+            
+       
+
+}
+.container .checkmark:after {  left: 9px;  top: 5px;  width: 5px;  height: 10px;  border: solid white;  border-width: 0 3px 3px 0;  -webkit-transform: rotate(45deg);  -ms-transform: rotate(45deg);  transform: rotate(45deg);}
+.checkbox-label{padding-top:5px;display:block;}
+
+div.scrollmenu {
+
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+  text-decoration: none;
+  cursor:default;
+}
+
+div.scrollmenu a:hover {
+  background-color: var(--_fifth);
+  border-radius:10px;
+}
+                                                
+    </style>
+  
+  <title></title>
+  </head>
+  <body>
+  
+  <div class="topnav">
+  <a  href="#">
+    
+    <label class="container"><span class="checkbox-label">Include Chords</span>
+      <input id="chkIncludeChords" type="checkbox" checked="true">
+      <span class="checkmark"></span>
+    </label>
+    
+  </a>
+  <a id="lnkTranspose" href="#">
+      <select id="cboTranspose" class="select custom-select">
+        <option value="A">G</option>
+        <option value="D">D</option>
+        <option value="A">A</option>
+        <option value="E">E</option>
+        <option value="B/Cb">B/Cb</option>
+        <option value="Gb/F#">Gb/F#</option>
+        <option value="Db/C#">Db/C#</option>
+        <option value="Ab">Ab</option>
+        <option value="Eb">Eb</option>
+        <option value="Bb">Bb</option>
+        <option value="Bb">F</option>
+        <option value="Bb">C</option>
+      </select>
+  </a>
+  
+
+  
+  <a id="lnkTransposeLabel" href="#">
+    <div class="item-content">Transpose:</div>
+  </a>
+  
+</div>
+  
+  <div class="content">
+  
+ 
+
+
+    <h5>Kupti Ako Chords - Rhema Band</h5>
+    
+     <div class="tab">
+      <button class="tablinks active" onclick="openCity(event, 'NIV')">Guitar</button>
+    </div>
+        <div id="NIV" class="tabcontent">
+        <div id="1-content">
+               
+        <div id="lstAvailableChords" class="scrollmenu">
+            <a href="#">      
+                <table>
+                        <tr>
+                        <td align=center><span >G</span></td>
+                        </tr>
+                        <tr>
+                        <td><span ><img src="dark/C/C_1.png"></span></td>
+                        </tr>
+                </table>
+            </a>
+            <a href="#">      
+                <table>
+                        <tr>
+                        <td align=center><span >G</span></td>
+                        </tr>
+                        <tr>
+                        <td><span ><img src="dark/C/C_1.png"></span></td>
+                        </tr>
+                </table>
+            </a>
+        </div>
+        </div>
+    </div>
+    
+    <br>
+    
+    
+     <div class="indent">
+  
+    <div class="line">
+    <span> INTRO:</span>
+    </div>
+    
+    <div class="line">
+       <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">A</i></span></div>
+       <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">E</i></span></div>
+       <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">F#</i></span></div>
+       <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">D</i></span></div>
+       <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">E</i></span></div>
+       <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">E7</i></span></div>
+       <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">E</i></span></div>
+    </div>
+    <div class="line">&nbsp;</div>
+  
+    <div class="line">
+    <span> VERSE 1:</span>
+    </div>
+    <div class="line">&nbsp;</div>
+  
+    <div class="line">
+        <div class="word">
+          <span class="no-space">Susi</span>
+          <div class="chord-letter "><span class="chord"><i onclick="openChord(this)" class="s-chord">A</i></span>ha</div>
+       </div>
+       <span class="no-space">Gi</span>
+       <div class="chord-letter "><span class="chord"><i onclick="openChord(this)" class="s-chord">E</i></span>noo</div>
+    </div>
+    
+    <div class="line">
+       <span class="no-space">Ang Kina</span>
+       <div class="chord-letter "><span class="chord">
+       <i onclick="openChord(this)" class="s-chord">F#</i></span>buhi ko</div>
+    </div>    
+
+    <div class="line">
+       <span class="no-space">Nga nagkina</span>
+       <div class="chord-letter "><span class="chord"><i onclick="openChord(this)" class="s-chord">D</span></i>hanglan</div>
+    </div>     
+    
+    <div class="line">
+       <div class="word">
+        <span class="no-space"></span>
+        <div class="chord-letter space">Sa</div>
+       </div>
+       <div class="word">
+        <span class="no-space">tan</span>
+        <div class="chord-letter"><span class="chord"><i onclick="openChord(this)" class="s-chord">E</i></span>dog mo</div>
+     </div>
+    </div> 
+    
+    <div class="line">&nbsp;</div>
+    <div class="line">
+    <span> VERSE 2:</span>
+    </div>
+    <div class="line">&nbsp;</div>
+    
+    <div class="line">
+       <div class="word">
+        <span class="no-space">Puka</span>
+        <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">A</i></span>wa ang</div>
+       </div>
+       <div class="word">
+        <span class="no-space">a</span>
+        <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">E</i></span>kong</div>
+     </div>
+    </div> 
+         
+    <div class="line">
+       <div class="word">
+        <span class="no-space">Nahika</span>
+        <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">F#</i></span>tulog nga</div>
+       </div>
+    </div>
+    
+
+    
+     <div class="line">
+       <div class="word">
+        <span class="no-space">Pag</span>
+        <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">D</i></span>higugma </div>
+       </div>
+    </div> 
+    
+    <div class="line">
+       <div class="word">
+        <span class="no-space"></span>
+        <div class="chord-letter space">Diha </div>
+       </div>
+       <div class="word">
+        <span class="no-space"></span>
+        <div class="chord-letter space">kanimo </div>
+       </div>
+       <div class="word">
+        <span class="no-space"></span>
+        <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">E</i></span>Ginoo</div>
+       </div>
+        <div class="word">
+        <span class="no-space"></span>
+        <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">E7</i></span>&nbsp;</div>
+       </div>
+       <div class="word">
+        <span class="no-space"></span>
+        <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">E</i></span>&nbsp;</div>
+       </div>
+    </div> 
+    
+    <div class="line">&nbsp;</div>
+    <div class="line">
+    <span> CHORUS:</span>
+    </div>
+    <div class="line">&nbsp;</div>
+    
+    <div class="line">
+       <div class="word">
+        <span class="no-space">Kup</span>
+        <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">A</i></span>ti ako </div>
+       </div>
+       <div class="word">
+        <span class="space">ug </span>
+        <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">E</i></span>gakson </div>
+       </div>
+       <div class="word">
+        <span class="no-space"></span>
+        <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">F#</i></span>Mo</div>
+       </div>
+    </div> 
+    <div class="line">
+       <div class="word">
+        <span class="space">Ikaw ang </span>
+        <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">D</i></span>akong gitinguha</div>
+       </div>
+    </div>     
+    <div class="line">
+       <div class="word">
+        <span class="no-space"></span>
+        <div class="chord-letter space"><span class="chord"></span>Ug </div>
+       </div>
+       <div class="word">
+        <span class="no-space">gipa</span>
+        <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">E</i></span>ngandoy </div>
+       </div>
+        <div class="word">
+        <span class="no-space">Ginoo</span>
+        <div class="chord-letter space"></div>
+       </div>
+    </div>  
+    
+    <div class="line">&nbsp;</div>
+    <div class="line">
+    <span> BRIDGE:</span>
+    </div>
+    <div class="line">&nbsp;</div>
+      
+    <div class="line">
+       <div class="word">
+        <span class="no-space">Sa ma</span>
+        <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">A</i></span>kausa </div>
+       </div>
+    </div>
+    <div class="line">
+       <div class="word">
+        <span class="no-space">Tag</span>
+        <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">E</i></span>bawa </div>
+       </div>
+       <div class="word">
+        <span class="no-space">A</span>
+        <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">F#</i></span>ko</div>
+       </div>
+    </div>
+    <div class="line">
+       <div class="word">
+        <span class="space">Pun-on </span>
+        <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">D</i></span>Mo</div>
+       </div>
+    </div>   
+    <div class="line">
+       <div class="word">
+        <span class="no-space"></span>
+        <div class="chord-letter space"><span class="chord"></span>Ania</div>
+       </div>
+       <div class="word">
+        <span class="no-space">a</span>
+        <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">E</i></span>ko, </div>
+       </div>
+       <div class="word">
+        <span class="no-space">Gino</span>
+        <div class="chord-letter space"><span class="chord"><i onclick="openChord(this)" class="s-chord">A</i></span>o</div>
+       </div>       
+    </div>       
+    
+    <div id="panel" class="popup-content"><div id="popup" class='popup'> <span  class='popuptext show'><span id="chord-value" class='text-default'>HAHAAH</span><img id="chord-src" src='A.png'/></span></div></div>
+    
+</div>
+  </body>
+</html>
+<script>
+
+var baseUrl = '';
+var mode = "dark";
+var defaultChords = "A"; 
+
+var A = "intro:A,E,F#,D,E,E7,E|verse1:A,E,F#,D,E|verse2:A,E,F#,D,E,E7,E|chorus:A,E,F#,D,E|bridge:A,E,F#,D,E,A";
+var C = "intro:C,G,Am,F,G,G7,G|verse1:C,G,Am,F,G|verse2:C,G,Am,F,G,G7,G|chorus:C,G,Am,F,G|bridge:C,G,Am,F,G,C";
+var D = "intro:D,A,Bm,G,A,A7,A|verse1:D,A,Bm,G,A|verse2:D,A,Bm,G,A,A7,A|chorus:D,A,Bm,G,A|bridge:A,E,F#,D,E,A";
+var E = "intro:E,E,F#,D,E,E7,E|verse1:A,E,F#,D,E|verse2:A,E,F#,D,E,E7,E|chorus:A,E,F#,D,E|bridge:A,E,F#,D,E,A";
+var F = "intro:E,E,F#,D,E,E7,E|verse1:A,E,F#,D,E|verse2:A,E,F#,D,E,E7,E|chorus:A,E,F#,D,E|bridge:A,E,F#,D,E,A";
+var G = "intro:G,E,F#,D,E,E7,E|verse1:A,E,F#,D,E|verse2:A,E,F#,D,E,E7,E|chorus:A,E,F#,D,E|bridge:A,E,F#,D,E,A";
+
+
+var chordType = {"intro": "A,E,F#,D,E,E7,E", "verse1": "A,E,F#,D,E", "verse2": "A,E,F#,D,E,E7,E",  "chorus": "A,E,F#,D,E", "bridge": "A,E,F#,D,E,A","outro":""};
+
+
+
+function openChord(object){
+    //var top = object.style.left;
+    var top = window.scrollY + object.getBoundingClientRect().top;
+    var left = window.scrollX + object.getBoundingClientRect().left + 45;
+
+    var popup = document.getElementById("panel");
+    var chordValue = document.getElementById("chord-value");
+    var chordSrc = document.getElementById("chord-src");
+    var chords = object.innerHTML;
+    
+    if(chords.includes('#')){
+    chordValue.innerHTML = object.innerHTML;
+    
+    var newsourceImage = chords.replace("#","sharp");
+    chordSrc.src = baseUrl + mode + "/" + newsourceImage + "/" + newsourceImage + "_1.png";
+    }
+    
+    else
+    {
+    chordValue.innerHTML = object.innerHTML;
+    chordSrc.src = baseUrl + mode + "/" + object.innerHTML + "/" + object.innerHTML + "_1.png";
+    }
+    
+    popup.style.display = 'block';
+    popup.style.left = left;
+    popup.style.top = top;
+}
+
+    window.addEventListener('click', function(e){   
+        var items = document.getElementsByClassName('s-chord');
+        var popup = document.getElementById("panel");
+        var blnfound = false;
+        for(var i = 0; i < items.length; i++){
+          if (items[i].contains(e.target)){
+          popup.style.display = 'display';
+          blnfound = true;
+          break;
+            }
+        }
+        if(blnfound==false)     popup.style.display = 'none';
+    });
+    
+
+function getSummarizedChords(chords){
+
+    var uniqueChords = new Array();
+    var intro = chordType['intro'].split(",");
+    
+    for(b=0;b<intro.length;b++)
+        {
+            for(bb=0;uniqueChords.length;bb++)
+                {
+                    if(intro[b]==uniqueChords[bb])
+                        {
+                            uniqueChords.push(intro[b]);
+                            break;
+                        }
+                }
+        }
+    
+
+}
+
+
+    
+    
+const checkbox = document.getElementById('chkIncludeChords')
+checkbox.addEventListener('change', (event) => {
+  var items = document.getElementsByClassName('chord');
+  var transpose = document.getElementById('lnkTranspose');
+  var transposeLabel = document.getElementById('lnkTransposeLabel');
+  
+  if (event.currentTarget.checked) {
+    for(var i = 0; i < items.length; i++){
+        items[i].style.display='block';
+    }
+    
+    transpose.style.display = 'block';
+    transposeLabel.style.display = 'block';
+  } else {
+      for(var i = 0; i < items.length; i++){
+        items[i].style.display='none';
+    }
+    transpose.style.display = 'none';
+    transposeLabel.style.display = 'none';
+  }
+});
+
+const combobox = document.getElementById('cboTranspose')
+     combobox.addEventListener('change', (event) => {
+    var text = combobox.options[combobox.selectedIndex].text;
+    var items = document.getElementsByClassName('s-chord');
+    var index = 0;
+
+    
+    if(text=="A") setTranspose(A);
+    else if(text=="C") setTranspose(C);
+    else if(text=="D") setTranspose(D);
+    else if(text=="E") setTranspose(E);
+    else if(text=="F") setTranspose(F);
+    else if(text=="G") setTranspose(G);
+    
+});
+
+
+function setTranspose(value)
+    {  
+        var items = document.getElementsByClassName('s-chord');  
+        var index = 0;  
+        var section = value.split("|"); 
+        
+        /*EXTRACT FROM SECTIONS */  
+        for(i=0;i<section.length;i++)
+            {  
+                /*alert(section[i]);*/ 
+                var extract_chords = section[i].split(":");  
+                var e_chords = extract_chords[1].split(",");  
+                /*EXTRACT FROM INNSER SECTIONS*/   
+                for(x=0;x<e_chords.length;x++)
+                    {  
+                        items[index].innerHTML = e_chords[x];   
+                        index++;    
+                    }   
+             }
+    }
+
+/* OPENING OF DEFAULT TAB CONTROL */
+openCity(event,'NIV');
+function openCity(evt, cityName) {  var i, tabcontent, tablinks;  tabcontent = document.getElementsByClassName("tabcontent");   for (i = 0; i < tabcontent.length; i++) {    tabcontent[i].style.display = "none";  }  tablinks = document.getElementsByClassName("tablinks");  for (i = 0; i < tablinks.length; i++) {   tablinks[i].className = tablinks[i].className.replace(" active", "");  }  document.getElementById(cityName).style.display = "block";  evt.currentTarget.className += " active";}
+
+</script>
+
